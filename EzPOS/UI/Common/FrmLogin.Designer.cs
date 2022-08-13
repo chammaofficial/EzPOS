@@ -33,15 +33,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtUsername = new DevExpress.XtraEditors.TextEdit();
             this.txtPassword = new DevExpress.XtraEditors.TextEdit();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLogin = new DevExpress.XtraEditors.SimpleButton();
             this.txtBranch = new DevExpress.XtraEditors.GridLookUpEdit();
-            this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.glBranches = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.clmnBranchCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clmnBranchName = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBranch.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.glBranches)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -89,13 +89,14 @@
             this.txtPassword.Size = new System.Drawing.Size(227, 23);
             this.txtPassword.TabIndex = 4;
             // 
-            // simpleButton1
+            // btnLogin
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(168, 155);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(94, 29);
-            this.simpleButton1.TabIndex = 6;
-            this.simpleButton1.Text = "Login";
+            this.btnLogin.Location = new System.Drawing.Point(168, 155);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(94, 29);
+            this.btnLogin.TabIndex = 6;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtBranch
             // 
@@ -105,20 +106,20 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtBranch.Properties.DisplayMember = "Name";
             this.txtBranch.Properties.NullText = "";
-            this.txtBranch.Properties.PopupView = this.gridLookUpEdit1View;
+            this.txtBranch.Properties.PopupView = this.glBranches;
             this.txtBranch.Properties.ValueMember = "Code";
             this.txtBranch.Size = new System.Drawing.Size(227, 23);
             this.txtBranch.TabIndex = 5;
             // 
-            // gridLookUpEdit1View
+            // glBranches
             // 
-            this.gridLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.glBranches.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.clmnBranchCode,
             this.clmnBranchName});
-            this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
-            this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            this.glBranches.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.glBranches.Name = "glBranches";
+            this.glBranches.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.glBranches.OptionsView.ShowGroupPanel = false;
             // 
             // clmnBranchCode
             // 
@@ -141,7 +142,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(425, 205);
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label3);
@@ -156,7 +157,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBranch.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.glBranches)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,9 +170,9 @@
         private System.Windows.Forms.Label label3;
         private DevExpress.XtraEditors.TextEdit txtUsername;
         private DevExpress.XtraEditors.TextEdit txtPassword;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnLogin;
         private DevExpress.XtraEditors.GridLookUpEdit txtBranch;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
+        private DevExpress.XtraGrid.Views.Grid.GridView glBranches;
         private DevExpress.XtraGrid.Columns.GridColumn clmnBranchCode;
         private DevExpress.XtraGrid.Columns.GridColumn clmnBranchName;
     }

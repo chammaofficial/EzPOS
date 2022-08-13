@@ -35,6 +35,16 @@ namespace EzPOS.UI.Common
             txtBranch.Properties.DataSource = Services.Login.GetAllBranchesByUser(txtUsername.Text);
         }
 
-       
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (Services.Login.VerifyLogin(txtUsername.Text, txtPassword.Text, txtBranch.EditValue.ToString()))
+            {
+                MessageBox.Show("Login Complete");
+            }
+            else
+            {
+                MessageBox.Show("Login Failed");
+            }
+        }
     }
 }
