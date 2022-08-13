@@ -31,13 +31,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtUsername = new DevExpress.XtraEditors.TextEdit();
+            this.txtPassword = new DevExpress.XtraEditors.TextEdit();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
+            this.txtBranch = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.clmnBranchCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clmnBranchName = new DevExpress.XtraGrid.Columns.GridColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBranch.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -70,26 +74,20 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Branch :";
             // 
-            // textEdit1
+            // txtUsername
             // 
-            this.textEdit1.Location = new System.Drawing.Point(136, 34);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(227, 23);
-            this.textEdit1.TabIndex = 3;
+            this.txtUsername.Location = new System.Drawing.Point(136, 34);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(227, 23);
+            this.txtUsername.TabIndex = 3;
+            this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
             // 
-            // textEdit2
+            // txtPassword
             // 
-            this.textEdit2.Location = new System.Drawing.Point(136, 72);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(227, 23);
-            this.textEdit2.TabIndex = 4;
-            // 
-            // textEdit3
-            // 
-            this.textEdit3.Location = new System.Drawing.Point(136, 110);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(227, 23);
-            this.textEdit3.TabIndex = 5;
+            this.txtPassword.Location = new System.Drawing.Point(136, 72);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(227, 23);
+            this.txtPassword.TabIndex = 4;
             // 
             // simpleButton1
             // 
@@ -99,26 +97,66 @@
             this.simpleButton1.TabIndex = 6;
             this.simpleButton1.Text = "Login";
             // 
+            // txtBranch
+            // 
+            this.txtBranch.Location = new System.Drawing.Point(136, 110);
+            this.txtBranch.Name = "txtBranch";
+            this.txtBranch.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtBranch.Properties.DisplayMember = "Name";
+            this.txtBranch.Properties.NullText = "";
+            this.txtBranch.Properties.PopupView = this.gridLookUpEdit1View;
+            this.txtBranch.Properties.ValueMember = "Code";
+            this.txtBranch.Size = new System.Drawing.Size(227, 23);
+            this.txtBranch.TabIndex = 5;
+            // 
+            // gridLookUpEdit1View
+            // 
+            this.gridLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.clmnBranchCode,
+            this.clmnBranchName});
+            this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
+            this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // clmnBranchCode
+            // 
+            this.clmnBranchCode.Caption = "Branch Code";
+            this.clmnBranchCode.FieldName = "Code";
+            this.clmnBranchCode.Name = "clmnBranchCode";
+            this.clmnBranchCode.Visible = true;
+            this.clmnBranchCode.VisibleIndex = 0;
+            // 
+            // clmnBranchName
+            // 
+            this.clmnBranchName.Caption = "Branch Name";
+            this.clmnBranchName.FieldName = "Name";
+            this.clmnBranchName.Name = "clmnBranchName";
+            this.clmnBranchName.Visible = true;
+            this.clmnBranchName.VisibleIndex = 1;
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(425, 205);
             this.Controls.Add(this.simpleButton1);
-            this.Controls.Add(this.textEdit3);
-            this.Controls.Add(this.textEdit2);
-            this.Controls.Add(this.textEdit1);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtBranch);
             this.MaximizeBox = false;
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmLogin";
+            this.Text = "Login - EzPOS";
             this.Load += new System.EventHandler(this.FrmLogin_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBranch.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,9 +167,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.TextEdit txtUsername;
+        private DevExpress.XtraEditors.TextEdit txtPassword;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.GridLookUpEdit txtBranch;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
+        private DevExpress.XtraGrid.Columns.GridColumn clmnBranchCode;
+        private DevExpress.XtraGrid.Columns.GridColumn clmnBranchName;
     }
 }
