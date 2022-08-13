@@ -16,5 +16,10 @@ namespace EzPOS.UI.Common
         {
             InitializeComponent();
         }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
