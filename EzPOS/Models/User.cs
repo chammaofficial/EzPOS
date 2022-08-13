@@ -22,6 +22,6 @@ namespace EzPOS.Models
         [Required]
         public string Password { get; set; }
 
-
+        public List<Branch> Branches { get; set; }
     }
 }

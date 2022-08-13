@@ -81,6 +81,10 @@
     <Compile Include="Migrations\202208131818031_CreateUserTable.designer.cs">
       <DependentUpon>202208131818031_CreateUserTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202208131821540_AddBranchestoUsers.cs" />
+    <Compile Include="Migrations\202208131821540_AddBranchestoUsers.designer.cs">
+      <DependentUpon>202208131821540_AddBranchestoUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Branch.cs" />
     <Compile Include="Models\User.cs" />
@@ -98,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202208131818031_CreateUserTable.resx">
       <DependentUpon>202208131818031_CreateUserTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208131821540_AddBranchestoUsers.resx">
+      <DependentUpon>202208131821540_AddBranchestoUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
