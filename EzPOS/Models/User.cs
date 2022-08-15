@@ -10,13 +10,12 @@ namespace EzPOS.Models
 {
     public class User
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
         public int Id { get; set; }
 
         [Required]
-        [Key]
+        [Index(IsUnique = true)]
         [StringLength(20)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public string Username { get; set; }
 
         [Required]

@@ -13,38 +13,39 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace EzPOS.UI.Common
 {
-    public partial class FrmLogin : DevExpress.XtraEditors.XtraForm
+    public partial class Login : DevExpress.XtraEditors.XtraForm
     {
-        public FrmLogin()
+        public Login()
         {
             InitializeComponent();
         }
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-            
-        }
-
-        private void txtUsername_Leave(object sender, EventArgs e)
-        {
             LoadBranches();
         }
 
         private void LoadBranches()
         {
-            txtBranch.Properties.DataSource = Services.Login.GetAllBranchesByUser(txtUsername.Text);
+             txtBranch.Properties.DataSource = Services.LoginService.GetAllBranches();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (Services.Login.VerifyLogin(txtUsername.Text, txtPassword.Text, txtBranch.EditValue.ToString()))
-            {
-                MessageBox.Show("Login Complete");
-            }
+            if (txtBranch.EditValue == null)
+                Helpers.Alerts.Info("Please Select a Branch to login.");
             else
             {
-                MessageBox.Show("Login Failed");
-            }
+                if (Services.LoginService.VerifyLogin(txtUsername.Text, txtPassword.Text, txtBranch.EditValue.ToString()))
+                {
+                    this.Hide();
+                    new Dashboard().Show();
+                }
+                else
+                {
+                    Helpers.Alerts.Error("Login Failed.");
+                }
+            }        
         }
     }
 }

@@ -11,13 +11,12 @@ namespace EzPOS.Models
     
     public class Branch
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
         public int Id { get; set; }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [MinLength(3)]
-        [MaxLength(3)]
-        [Key]
+        [MinLength(5)]
+        [MaxLength(5)]
+        [Required]
         public string Code { get; set; }
 
         [Required]

@@ -7,13 +7,13 @@ namespace EzPOS.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class CreateBranchTable : IMigrationMetadata
+    public sealed partial class Initiate : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(CreateBranchTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Initiate));
         
         string IMigrationMetadata.Id
         {
-            get { return "202208131813464_CreateBranchTable"; }
+            get { return "202208141751028_Initiate"; }
         }
         
         string IMigrationMetadata.Source

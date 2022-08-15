@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,9 +10,9 @@ using EzPOS.Models;
 
 namespace EzPOS.Services
 {
-    public static class Login
+    public static class LoginService
     {
-        public static List<Branch> GetAllBranchesByUser(string username)
+        public static List<Branch> GetAllBranches()
         {
             using (var context = new POSContext())
             {
@@ -28,7 +29,10 @@ namespace EzPOS.Services
                 if(user == null)
                     return false;
 
-                if (user.Password != Helpers.EncryptionService.EncryptPassword(Password))
+                //if (user.Password != Helpers.EncryptionService.EncryptPassword(Password))
+                //    return false;
+
+                if (user.Password != Password)
                     return false;
                 else
                 {
