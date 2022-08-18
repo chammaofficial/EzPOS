@@ -12,6 +12,7 @@ namespace EzPOS
         public DbSet <Supplier> Suppliers { get; set; }
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<ProductStatusCode> ProductStatusCodes { get; set; }
 
 
 

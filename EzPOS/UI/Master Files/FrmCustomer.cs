@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using EzPOS.Helpers;
+using EzPOS.Models;
 using EzPOS.Services;
 
 namespace EzPOS.UI.Master_Files
@@ -83,7 +84,12 @@ namespace EzPOS.UI.Master_Files
 
         private void lnkEdit_Click(object sender, EventArgs e)
         {
-
+            TempCustomer = CustomerService.GetCustomerById(int.Parse(GVCustomer.GetRowCellValue(GVCustomer.FocusedRowHandle, clmnId).ToString()));
+            txtName.Text = TempCustomer.Name;
+            txtAddress.Text = TempCustomer.Address;
+            txtEmail.Text = TempCustomer.Email;
+            txtMobile.Text = TempCustomer.Mobile;
+            txtNic.Text = TempCustomer.Nic;
         }
     }
 }

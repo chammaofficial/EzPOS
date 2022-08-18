@@ -51,5 +51,19 @@ namespace EzPOS.UI.Common
             CustomerForm.MdiParent = documentManager1.MdiParent;
             CustomerForm.Show();
         }
+
+        private void barBtnBrands_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmBrands BrandForm = new FrmBrands();
+            BrandForm.MdiParent = documentManager1.MdiParent;
+            BrandForm.Show();
+        }
+
+        private void barBtnCategories_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmCategories CategoryForm = new FrmCategories();
+            CategoryForm.MdiParent = documentManager1.MdiParent;
+            CategoryForm.Show();
+        }
     }
 }

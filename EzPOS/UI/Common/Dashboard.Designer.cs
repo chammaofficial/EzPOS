@@ -53,6 +53,10 @@
             this.TimerDateTime = new System.Windows.Forms.Timer(this.components);
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
+            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barBtnBrands = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnCategories = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -70,10 +74,12 @@
             this.lblLoggedUser,
             this.lblDateTime,
             this.barBtnSupplier,
-            this.barBtnCustomer});
+            this.barBtnCustomer,
+            this.barBtnBrands,
+            this.barBtnCategories});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(10, 12, 10, 12);
-            this.ribbonControl1.MaxItemId = 11;
+            this.ribbonControl1.MaxItemId = 13;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsMenuMinWidth = 1100;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -136,8 +142,8 @@
             // 
             this.barBtnCustomer.Caption = "Customers";
             this.barBtnCustomer.Id = 10;
-            this.barBtnCustomer.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.barBtnCustomer.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.barBtnCustomer.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barBtnCustomer.ImageOptions.Image")));
+            this.barBtnCustomer.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtnCustomer.ImageOptions.LargeImage")));
             this.barBtnCustomer.Name = "barBtnCustomer";
             this.barBtnCustomer.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -161,7 +167,9 @@
             this.menuMasterFiles.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup4,
             this.ribbonPageGroup3,
-            this.ribbonPageGroup6});
+            this.ribbonPageGroup6,
+            this.ribbonPageGroup7,
+            this.ribbonPageGroup8});
             this.menuMasterFiles.Name = "menuMasterFiles";
             this.menuMasterFiles.Text = "Master Files";
             // 
@@ -240,6 +248,38 @@
             this.documentManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
             this.tabbedView1});
             // 
+            // ribbonPageGroup7
+            // 
+            this.ribbonPageGroup7.AllowTextClipping = false;
+            this.ribbonPageGroup7.ItemLinks.Add(this.barBtnBrands);
+            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
+            this.ribbonPageGroup7.Text = "Brands Master";
+            // 
+            // ribbonPageGroup8
+            // 
+            this.ribbonPageGroup8.AllowTextClipping = false;
+            this.ribbonPageGroup8.ItemLinks.Add(this.barBtnCategories);
+            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
+            this.ribbonPageGroup8.Text = "Categories Master";
+            // 
+            // barBtnBrands
+            // 
+            this.barBtnBrands.Caption = "Brands";
+            this.barBtnBrands.Id = 11;
+            this.barBtnBrands.Name = "barBtnBrands";
+            this.barBtnBrands.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.barBtnBrands.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnBrands_ItemClick);
+            // 
+            // barBtnCategories
+            // 
+            this.barBtnCategories.Caption = "Categories";
+            this.barBtnCategories.Id = 12;
+            this.barBtnCategories.Name = "barBtnCategories";
+            this.barBtnCategories.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.barBtnCategories.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnCategories_ItemClick);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -287,5 +327,9 @@
         private DevExpress.XtraBars.BarButtonItem barBtnCustomer;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
+        private DevExpress.XtraBars.BarButtonItem barBtnBrands;
+        private DevExpress.XtraBars.BarButtonItem barBtnCategories;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
     }
 }
