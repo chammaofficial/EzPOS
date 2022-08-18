@@ -23,5 +23,10 @@ namespace EzPOS.Helpers
         {
             MessageBox.Show(text, "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        public static DialogResult Confirm(string text)
+        {
+            return MessageBox.Show(text, "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        }
     }
 }

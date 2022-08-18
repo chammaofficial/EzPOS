@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EzPOS.Models
 {
@@ -25,7 +20,7 @@ namespace EzPOS.Models
         [StringLength(10)]
         public string Phone { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Contact Person field is required")]
         [StringLength(500)]
         public string ContactPerson { get; set; }
 
@@ -35,6 +30,21 @@ namespace EzPOS.Models
 
         [StringLength(500)]
         public string Email { get; set; }
+
+        public string CreateBy { get; set; }
+
+        public DateTime? CreateDate { get; set; }
+
+        public string UpdateBy { get; set; }
+
+        public DateTime? UpdateDate { get; set; }
+
+        [Required]
+        public Boolean IsActive { get; set; }
+
+        public string Other { get; set; }
+
+        public string Remark { get; set; }
 
     }
 }

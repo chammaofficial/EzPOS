@@ -9,7 +9,6 @@ namespace EzPOS.Helpers
 {
     public static class Extentions
     {
-
         public static void Clear(this TextEdit Field)
         {
             Field.Text = "";

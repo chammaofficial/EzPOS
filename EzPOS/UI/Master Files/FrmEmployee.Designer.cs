@@ -1,4 +1,4 @@
-﻿namespace EzPOS.UI.Employee
+﻿namespace EzPOS.UI.Master_Files
 {
     partial class FrmEmployee
     {
@@ -40,6 +40,10 @@
             this.clmnNic = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clmnEmail = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clmnBranch = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clmnEdit = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.lnkEdit = new DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit();
+            this.clmnDelete = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.lnkDelete = new DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.BtnClear = new DevExpress.XtraEditors.SimpleButton();
             this.BtnSave = new DevExpress.XtraEditors.SimpleButton();
@@ -54,13 +58,16 @@
             this.txtId = new DevExpress.XtraEditors.TextEdit();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtAddress = new DevExpress.XtraEditors.MemoEdit();
+            this.txtAddress = new DevExpress.XtraEditors.TextEdit();
+            this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GCEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GVEmployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lnkEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lnkDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
@@ -79,7 +86,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(609, 709);
+            this.panelControl1.Size = new System.Drawing.Size(735, 709);
             this.panelControl1.TabIndex = 0;
             // 
             // groupControl2
@@ -93,7 +100,7 @@
             this.groupControl2.Location = new System.Drawing.Point(11, 330);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(9, 10, 9, 10);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(585, 359);
+            this.groupControl2.Size = new System.Drawing.Size(711, 359);
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "Employee List";
             // 
@@ -105,7 +112,10 @@
             this.GCEmployee.MainView = this.GVEmployee;
             this.GCEmployee.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.GCEmployee.Name = "GCEmployee";
-            this.GCEmployee.Size = new System.Drawing.Size(581, 308);
+            this.GCEmployee.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.lnkEdit,
+            this.lnkDelete});
+            this.GCEmployee.Size = new System.Drawing.Size(707, 308);
             this.GCEmployee.TabIndex = 0;
             this.GCEmployee.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.GVEmployee});
@@ -119,7 +129,9 @@
             this.clmnMobile,
             this.clmnNic,
             this.clmnEmail,
-            this.clmnBranch});
+            this.clmnBranch,
+            this.clmnEdit,
+            this.clmnDelete});
             this.GVEmployee.DetailHeight = 546;
             this.GVEmployee.GridControl = this.GCEmployee;
             this.GVEmployee.Name = "GVEmployee";
@@ -127,6 +139,7 @@
             // clmnId
             // 
             this.clmnId.Caption = "Id";
+            this.clmnId.FieldName = "Id";
             this.clmnId.MinWidth = 27;
             this.clmnId.Name = "clmnId";
             this.clmnId.OptionsColumn.AllowEdit = false;
@@ -138,6 +151,7 @@
             // clmnName
             // 
             this.clmnName.Caption = "Name";
+            this.clmnName.FieldName = "Name";
             this.clmnName.MinWidth = 27;
             this.clmnName.Name = "clmnName";
             this.clmnName.OptionsColumn.AllowEdit = false;
@@ -149,6 +163,7 @@
             // clmnAddress
             // 
             this.clmnAddress.Caption = "Address";
+            this.clmnAddress.FieldName = "Address";
             this.clmnAddress.MinWidth = 27;
             this.clmnAddress.Name = "clmnAddress";
             this.clmnAddress.OptionsColumn.AllowEdit = false;
@@ -160,6 +175,7 @@
             // clmnMobile
             // 
             this.clmnMobile.Caption = "Mobile";
+            this.clmnMobile.FieldName = "Mobile";
             this.clmnMobile.MinWidth = 27;
             this.clmnMobile.Name = "clmnMobile";
             this.clmnMobile.OptionsColumn.AllowEdit = false;
@@ -171,6 +187,7 @@
             // clmnNic
             // 
             this.clmnNic.Caption = "Nic";
+            this.clmnNic.FieldName = "Nic";
             this.clmnNic.MinWidth = 27;
             this.clmnNic.Name = "clmnNic";
             this.clmnNic.OptionsColumn.AllowEdit = false;
@@ -182,6 +199,7 @@
             // clmnEmail
             // 
             this.clmnEmail.Caption = "Email";
+            this.clmnEmail.FieldName = "Email";
             this.clmnEmail.MinWidth = 27;
             this.clmnEmail.Name = "clmnEmail";
             this.clmnEmail.OptionsColumn.AllowEdit = false;
@@ -193,6 +211,7 @@
             // clmnBranch
             // 
             this.clmnBranch.Caption = "Branch";
+            this.clmnBranch.FieldName = "Branch.Name";
             this.clmnBranch.MinWidth = 27;
             this.clmnBranch.Name = "clmnBranch";
             this.clmnBranch.OptionsColumn.AllowEdit = false;
@@ -201,12 +220,49 @@
             this.clmnBranch.VisibleIndex = 6;
             this.clmnBranch.Width = 102;
             // 
+            // clmnEdit
+            // 
+            this.clmnEdit.Caption = "Edit";
+            this.clmnEdit.ColumnEdit = this.lnkEdit;
+            this.clmnEdit.MinWidth = 25;
+            this.clmnEdit.Name = "clmnEdit";
+            this.clmnEdit.Visible = true;
+            this.clmnEdit.VisibleIndex = 7;
+            this.clmnEdit.Width = 94;
+            // 
+            // lnkEdit
+            // 
+            this.lnkEdit.AutoHeight = false;
+            this.lnkEdit.Caption = "Edit";
+            this.lnkEdit.Name = "lnkEdit";
+            this.lnkEdit.NullText = "Edit";
+            this.lnkEdit.Click += new System.EventHandler(this.lnkEdit_Click);
+            // 
+            // clmnDelete
+            // 
+            this.clmnDelete.Caption = "Delete";
+            this.clmnDelete.ColumnEdit = this.lnkDelete;
+            this.clmnDelete.MinWidth = 25;
+            this.clmnDelete.Name = "clmnDelete";
+            this.clmnDelete.Visible = true;
+            this.clmnDelete.VisibleIndex = 8;
+            this.clmnDelete.Width = 94;
+            // 
+            // lnkDelete
+            // 
+            this.lnkDelete.AutoHeight = false;
+            this.lnkDelete.Caption = "Delete";
+            this.lnkDelete.Name = "lnkDelete";
+            this.lnkDelete.NullText = "Delete";
+            this.lnkDelete.Click += new System.EventHandler(this.lnkDelete_Click);
+            // 
             // groupControl1
             // 
             this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl1.AutoSize = true;
             this.groupControl1.CaptionImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("groupControl1.CaptionImageOptions.SvgImage")));
+            this.groupControl1.Controls.Add(this.btnRefresh);
             this.groupControl1.Controls.Add(this.BtnClear);
             this.groupControl1.Controls.Add(this.BtnSave);
             this.groupControl1.Controls.Add(this.label6);
@@ -224,14 +280,14 @@
             this.groupControl1.Location = new System.Drawing.Point(11, 25);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(585, 292);
+            this.groupControl1.Size = new System.Drawing.Size(711, 292);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Employee Details";
             // 
             // BtnClear
             // 
-            this.BtnClear.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.BtnClear.Location = new System.Drawing.Point(456, 238);
+            this.BtnClear.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnClear.ImageOptions.Image")));
+            this.BtnClear.Location = new System.Drawing.Point(578, 225);
             this.BtnClear.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.BtnClear.Name = "BtnClear";
             this.BtnClear.Size = new System.Drawing.Size(102, 34);
@@ -241,12 +297,12 @@
             // 
             // BtnSave
             // 
-            this.BtnSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
-            this.BtnSave.Location = new System.Drawing.Point(343, 238);
+            this.BtnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnSave.ImageOptions.Image")));
+            this.BtnSave.Location = new System.Drawing.Point(466, 225);
             this.BtnSave.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(102, 34);
-            this.BtnSave.TabIndex = 16;
+            this.BtnSave.TabIndex = 5;
             this.BtnSave.Text = "Save";
             this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
@@ -254,7 +310,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(287, 189);
+            this.label6.Location = new System.Drawing.Point(351, 189);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 18);
@@ -265,7 +321,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(299, 138);
+            this.label5.Location = new System.Drawing.Point(363, 138);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 18);
@@ -276,7 +332,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(281, 83);
+            this.label4.Location = new System.Drawing.Point(345, 83);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 18);
@@ -296,43 +352,44 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(343, 188);
+            this.txtEmail.Location = new System.Drawing.Point(407, 188);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(215, 23);
-            this.txtEmail.TabIndex = 8;
+            this.txtEmail.Size = new System.Drawing.Size(273, 23);
+            this.txtEmail.TabIndex = 4;
             // 
             // txtNic
             // 
-            this.txtNic.Location = new System.Drawing.Point(343, 137);
+            this.txtNic.Location = new System.Drawing.Point(407, 137);
             this.txtNic.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.txtNic.Name = "txtNic";
-            this.txtNic.Size = new System.Drawing.Size(215, 23);
-            this.txtNic.TabIndex = 7;
+            this.txtNic.Size = new System.Drawing.Size(273, 23);
+            this.txtNic.TabIndex = 3;
             // 
             // txtMobile
             // 
-            this.txtMobile.Location = new System.Drawing.Point(343, 82);
+            this.txtMobile.Location = new System.Drawing.Point(407, 82);
             this.txtMobile.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.txtMobile.Name = "txtMobile";
-            this.txtMobile.Size = new System.Drawing.Size(215, 23);
-            this.txtMobile.TabIndex = 6;
+            this.txtMobile.Size = new System.Drawing.Size(273, 23);
+            this.txtMobile.TabIndex = 2;
             // 
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(95, 137);
             this.txtName.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(172, 23);
-            this.txtName.TabIndex = 4;
+            this.txtName.Size = new System.Drawing.Size(238, 23);
+            this.txtName.TabIndex = 0;
             // 
             // txtId
             // 
             this.txtId.EditValue = "[Auto Generated]";
+            this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(95, 82);
             this.txtId.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(172, 23);
+            this.txtId.Size = new System.Drawing.Size(238, 23);
             this.txtId.TabIndex = 3;
             // 
             // label2
@@ -362,15 +419,26 @@
             this.txtAddress.Location = new System.Drawing.Point(95, 190);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(172, 80);
-            this.txtAddress.TabIndex = 5;
+            this.txtAddress.Size = new System.Drawing.Size(238, 23);
+            this.txtAddress.TabIndex = 1;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnRefresh.Location = new System.Drawing.Point(354, 225);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(102, 34);
+            this.btnRefresh.TabIndex = 17;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // FrmEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(609, 709);
+            this.ClientSize = new System.Drawing.Size(735, 709);
             this.Controls.Add(this.panelControl1);
             this.Name = "FrmEmployee";
             this.Text = "Employee";
@@ -382,6 +450,8 @@
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GCEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GVEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lnkEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lnkDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
@@ -406,7 +476,6 @@
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.TextEdit txtName;
         private DevExpress.XtraEditors.TextEdit txtId;
-        private DevExpress.XtraEditors.MemoEdit txtAddress;
         private DevExpress.XtraEditors.TextEdit txtMobile;
         private DevExpress.XtraEditors.TextEdit txtEmail;
         private DevExpress.XtraEditors.TextEdit txtNic;
@@ -423,5 +492,11 @@
         private DevExpress.XtraGrid.Columns.GridColumn clmnNic;
         private DevExpress.XtraGrid.Columns.GridColumn clmnEmail;
         private DevExpress.XtraGrid.Columns.GridColumn clmnBranch;
+        private DevExpress.XtraGrid.Columns.GridColumn clmnEdit;
+        private DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit lnkEdit;
+        private DevExpress.XtraGrid.Columns.GridColumn clmnDelete;
+        private DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit lnkDelete;
+        private DevExpress.XtraEditors.TextEdit txtAddress;
+        private DevExpress.XtraEditors.SimpleButton btnRefresh;
     }
 }

@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 
 namespace EzPOS.Models
 {
-    public class Employee   
+    public class Employee
     {
         [Key]
         public int Id { get; set; }
@@ -24,13 +24,25 @@ namespace EzPOS.Models
 
         [Required]
         [StringLength(12)]
+        [Index(IsUnique = true)]
         public string Nic { get; set; }
 
         [StringLength(500)]
 
         public string Email { get; set; }
 
-        public Branch Branch { get; set; }
+        public string CreateBy { get; set; }
+
+        public DateTime? CreateDate { get; set; }
+
+        public string UpdateBy { get; set; }
+
+        public DateTime? UpdateDate { get; set; }
+
+        [Required]
+        public Boolean IsActive { get; set; }
+
+        public virtual Branch Branch { get; set; }
 
         public int BranchId { get; set; }
 

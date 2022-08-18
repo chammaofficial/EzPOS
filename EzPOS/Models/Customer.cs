@@ -32,5 +32,16 @@ namespace EzPOS.Models
         [StringLength(500)]
         public string Email { get; set; }
 
+        public string CreateBy { get; set; }
+
+        public DateTime? CreateDate { get; set; }
+
+        public string UpdateBy { get; set; }
+
+        public DateTime? UpdateDate { get; set; }
+
+        [Required]
+        public Boolean IsActive { get; set; }
+
     }
 }

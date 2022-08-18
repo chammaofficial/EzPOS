@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Windows.Forms;
 using EzPOS.UI;
+using EzPOS.UI.Master_Files;
 
 namespace EzPOS.UI.Common
 {
@@ -26,9 +28,28 @@ namespace EzPOS.UI.Common
 
         private void barBtnEmployee_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Employee.FrmEmployee EmployeeForm = new Employee.FrmEmployee();
+            FrmEmployee EmployeeForm = new FrmEmployee();
             EmployeeForm.MdiParent = documentManager1.MdiParent;
             EmployeeForm.Show();
+        }
+
+        private void Dashboard_FormClosing(object sender, System.Windows.Forms.FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void barBtnSupplier_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmSupplier SupplierForm = new FrmSupplier();
+            SupplierForm.MdiParent = documentManager1.MdiParent;
+            SupplierForm.Show();
+        }
+
+        private void barBtnCustomer_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmCustomer CustomerForm = new FrmCustomer();
+            CustomerForm.MdiParent = documentManager1.MdiParent;
+            CustomerForm.Show();
         }
     }
 }

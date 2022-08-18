@@ -35,10 +35,14 @@
             this.barBtnEmployee = new DevExpress.XtraBars.BarButtonItem();
             this.lblLoggedUser = new DevExpress.XtraBars.BarStaticItem();
             this.lblDateTime = new DevExpress.XtraBars.BarStaticItem();
+            this.barBtnSupplier = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnCustomer = new DevExpress.XtraBars.BarButtonItem();
             this.menuAdministration = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.functionBranches = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.menuMasterFiles = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -64,10 +68,12 @@
             this.BarBtnBranches,
             this.barBtnEmployee,
             this.lblLoggedUser,
-            this.lblDateTime});
+            this.lblDateTime,
+            this.barBtnSupplier,
+            this.barBtnCustomer});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(10, 12, 10, 12);
-            this.ribbonControl1.MaxItemId = 9;
+            this.ribbonControl1.MaxItemId = 11;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsMenuMinWidth = 1100;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -94,9 +100,10 @@
             // 
             // barBtnEmployee
             // 
-            this.barBtnEmployee.Caption = "New Employee";
+            this.barBtnEmployee.Caption = "Employees";
             this.barBtnEmployee.Id = 4;
-            this.barBtnEmployee.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barBtnEmployee.ImageOptions.SvgImage")));
+            this.barBtnEmployee.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barBtnEmployee.ImageOptions.Image")));
+            this.barBtnEmployee.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtnEmployee.ImageOptions.LargeImage")));
             this.barBtnEmployee.Name = "barBtnEmployee";
             this.barBtnEmployee.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -114,6 +121,28 @@
             this.lblDateTime.Id = 8;
             this.lblDateTime.Name = "lblDateTime";
             // 
+            // barBtnSupplier
+            // 
+            this.barBtnSupplier.Caption = "Suppliers";
+            this.barBtnSupplier.Id = 9;
+            this.barBtnSupplier.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barBtnSupplier.ImageOptions.Image")));
+            this.barBtnSupplier.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtnSupplier.ImageOptions.LargeImage")));
+            this.barBtnSupplier.Name = "barBtnSupplier";
+            this.barBtnSupplier.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.barBtnSupplier.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnSupplier_ItemClick);
+            // 
+            // barBtnCustomer
+            // 
+            this.barBtnCustomer.Caption = "Customers";
+            this.barBtnCustomer.Id = 10;
+            this.barBtnCustomer.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
+            this.barBtnCustomer.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.barBtnCustomer.Name = "barBtnCustomer";
+            this.barBtnCustomer.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.barBtnCustomer.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnCustomer_ItemClick);
+            // 
             // menuAdministration
             // 
             this.menuAdministration.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -130,16 +159,32 @@
             // menuMasterFiles
             // 
             this.menuMasterFiles.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup4});
+            this.ribbonPageGroup4,
+            this.ribbonPageGroup3,
+            this.ribbonPageGroup6});
             this.menuMasterFiles.Name = "menuMasterFiles";
-            this.menuMasterFiles.Text = "Employees";
+            this.menuMasterFiles.Text = "Master Files";
             // 
             // ribbonPageGroup4
             // 
             this.ribbonPageGroup4.AllowTextClipping = false;
             this.ribbonPageGroup4.ItemLinks.Add(this.barBtnEmployee);
             this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            this.ribbonPageGroup4.Text = "New Employee";
+            this.ribbonPageGroup4.Text = "Employee Master";
+            // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.AllowTextClipping = false;
+            this.ribbonPageGroup3.ItemLinks.Add(this.barBtnSupplier);
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "Supplier Master";
+            // 
+            // ribbonPageGroup6
+            // 
+            this.ribbonPageGroup6.AllowTextClipping = false;
+            this.ribbonPageGroup6.ItemLinks.Add(this.barBtnCustomer);
+            this.ribbonPageGroup6.Name = "ribbonPageGroup6";
+            this.ribbonPageGroup6.Text = "Customer Master";
             // 
             // ribbonPage1
             // 
@@ -170,22 +215,22 @@
             this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup5});
             this.ribbonPage4.Name = "ribbonPage4";
-            this.ribbonPage4.Text = "ribbonPage4";
+            this.ribbonPage4.Text = "Reports";
             // 
             // ribbonPageGroup5
             // 
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
-            this.ribbonPageGroup5.Text = "ribbonPageGroup5";
+            this.ribbonPageGroup5.Text = "Master Files";
             // 
             // ribbonStatusBar1
             // 
             this.ribbonStatusBar1.ItemLinks.Add(this.lblLoggedUser);
             this.ribbonStatusBar1.ItemLinks.Add(this.lblDateTime);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 646);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 652);
             this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(9, 10, 9, 10);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(1298, 34);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1298, 28);
             // 
             // documentManager1
             // 
@@ -207,6 +252,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Dashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Dashboard_FormClosing);
             this.Load += new System.EventHandler(this.Dashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
@@ -237,5 +283,9 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.Docking2010.DocumentManager documentManager1;
         private DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView tabbedView1;
+        private DevExpress.XtraBars.BarButtonItem barBtnSupplier;
+        private DevExpress.XtraBars.BarButtonItem barBtnCustomer;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
     }
 }
