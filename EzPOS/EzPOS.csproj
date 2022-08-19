@@ -175,6 +175,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Services\ProductStatusCodeService.cs" />
     <Compile Include="Services\BrandService.cs" />
     <Compile Include="Services\CategoryService.cs" />
     <Compile Include="Services\CustomerService.cs" />
@@ -193,6 +194,12 @@
     </Compile>
     <Compile Include="UI\Common\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Master Files\FrmProductStatusCodes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Master Files\FrmProductStatusCodes.Designer.cs">
+      <DependentUpon>FrmProductStatusCodes.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Master Files\FrmBrands.cs">
       <SubType>Form</SubType>
@@ -263,6 +270,9 @@
     <EmbeddedResource Include="UI\Common\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Master Files\FrmProductStatusCodes.resx">
+      <DependentUpon>FrmProductStatusCodes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Master Files\FrmBrands.resx">
       <DependentUpon>FrmBrands.cs</DependentUpon>
     </EmbeddedResource>
@@ -297,6 +307,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
+    <None Include="Resources\Product_status_codes_32px.png" />
+    <None Include="Resources\Product_status_codes_48px.png" />
     <None Include="Resources\save_32px.png" />
     <None Include="Resources\refresh_32px.png" />
     <None Include="Resources\eraser_tool_32px.png" />

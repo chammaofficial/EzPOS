@@ -89,5 +89,22 @@ namespace EzPOS.Helpers
                 }
             }
         }
+
+        public static bool Validate(this Models.ProductStatusCode code)
+        {
+            using (var context = new POSContext())
+            {
+                var errors = context.Entry(code).GetValidationResult().ValidationErrors;
+                if (errors.Any())
+                {
+                    Alerts.Error(errors.First().ErrorMessage);
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+        }
     }
 }
