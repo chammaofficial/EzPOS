@@ -106,5 +106,56 @@ namespace EzPOS.Helpers
                 }
             }
         }
+
+        public static bool Validate(this Models.Product p)
+        {
+            using (var context = new POSContext())
+            {
+                var errors = context.Entry(p).GetValidationResult().ValidationErrors;
+                if (errors.Any())
+                {
+                    Alerts.Error(errors.First().ErrorMessage);
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+        }
+
+        public static bool Validate(this Models.PurchaseOrder p)
+        {
+            using (var context = new POSContext())
+            {
+                var errors = context.Entry(p).GetValidationResult().ValidationErrors;
+                if (errors.Any())
+                {
+                    Alerts.Error(errors.First().ErrorMessage);
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+        }
+
+        public static bool Validate(this Models.PurchaseOrderDetail p)
+        {
+            using (var context = new POSContext())
+            {
+                var errors = context.Entry(p).GetValidationResult().ValidationErrors;
+                if (errors.Any())
+                {
+                    Alerts.Error(errors.First().ErrorMessage);
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+        }
     }
 }

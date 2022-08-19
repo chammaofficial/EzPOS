@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using EzPOS.UI;
 using EzPOS.UI.Master_Files;
+using EzPOS.UI.Purchase;
 
 namespace EzPOS.UI.Common
 {
@@ -64,6 +65,28 @@ namespace EzPOS.UI.Common
             FrmCategories CategoryForm = new FrmCategories();
             CategoryForm.MdiParent = documentManager1.MdiParent;
             CategoryForm.Show();
+        }
+
+        private void barBtnProductMaster_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmProducts ProductForm = new FrmProducts();
+            ProductForm.MdiParent = documentManager1.MdiParent;
+            ProductForm.Show();
+        }
+
+        private void barBtnBarcodeConfiguration_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Helpers.Alerts.Info("This is a Upcoming Feature. Not ready yet.");
+            //FrmBarcodeConfiguration form = new FrmBarcodeConfiguration();
+            //form.MdiParent = documentManager1.MdiParent;
+            //form.Show();
+        }
+
+        private void barBtnPurchaseOrder_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmPurchaseOrder form = new FrmPurchaseOrder();
+            form.MdiParent = documentManager1.MdiParent;
+            form.Show();
         }
     }
 }

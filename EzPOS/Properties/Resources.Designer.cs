@@ -63,6 +63,26 @@ namespace EzPOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap barcode_32px {
+            get {
+                object obj = ResourceManager.GetObject("barcode_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap barcode_48px {
+            get {
+                object obj = ResourceManager.GetObject("barcode_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap categorize_32px {
             get {
                 object obj = ResourceManager.GetObject("categorize_32px", resourceCulture);
@@ -133,6 +153,46 @@ namespace EzPOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GRN_32px {
+            get {
+                object obj = ResourceManager.GetObject("GRN_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GRN_48px {
+            get {
+                object obj = ResourceManager.GetObject("GRN_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GRN_Cancel_32px {
+            get {
+                object obj = ResourceManager.GetObject("GRN_Cancel_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GRN_Cancel_48px {
+            get {
+                object obj = ResourceManager.GetObject("GRN_Cancel_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap list_view_32px {
             get {
                 object obj = ResourceManager.GetObject("list_view_32px", resourceCulture);
@@ -146,6 +206,26 @@ namespace EzPOS.Properties {
         internal static System.Drawing.Bitmap list_view_48px {
             get {
                 object obj = ResourceManager.GetObject("list_view_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap product_32px {
+            get {
+                object obj = ResourceManager.GetObject("product_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap product_48px {
+            get {
+                object obj = ResourceManager.GetObject("product_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,6 +253,26 @@ namespace EzPOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap purchase_order_32px {
+            get {
+                object obj = ResourceManager.GetObject("purchase_order_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap purchase_order_48px {
+            get {
+                object obj = ResourceManager.GetObject("purchase_order_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap refresh_32px {
             get {
                 object obj = ResourceManager.GetObject("refresh_32px", resourceCulture);
@@ -193,6 +293,26 @@ namespace EzPOS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Stock_Receiving_book_32px {
+            get {
+                object obj = ResourceManager.GetObject("Stock_Receiving_book_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Stock_Receiving_book_48px {
+            get {
+                object obj = ResourceManager.GetObject("Stock_Receiving_book_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap supplier_32px {
             get {
                 object obj = ResourceManager.GetObject("supplier_32px", resourceCulture);
@@ -206,6 +326,26 @@ namespace EzPOS.Properties {
         internal static System.Drawing.Bitmap supplier_48px {
             get {
                 object obj = ResourceManager.GetObject("supplier_48px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Supplier_Payment_32px {
+            get {
+                object obj = ResourceManager.GetObject("Supplier_Payment_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Supplier_Payment_48px {
+            get {
+                object obj = ResourceManager.GetObject("Supplier_Payment_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
