@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSupplier));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.GCSupplier = new DevExpress.XtraGrid.GridControl();
@@ -106,7 +105,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl2.AutoSize = true;
-            this.groupControl2.CaptionImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("groupControl2.CaptionImageOptions.SvgImage")));
+            this.groupControl2.CaptionImageOptions.Image = global::EzPOS.Properties.Resources.list_view_32px;
             this.groupControl2.Controls.Add(this.GCSupplier);
             this.groupControl2.Location = new System.Drawing.Point(11, 330);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(9, 10, 9, 10);
@@ -119,14 +118,14 @@
             // 
             this.GCSupplier.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GCSupplier.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.GCSupplier.Location = new System.Drawing.Point(2, 49);
+            this.GCSupplier.Location = new System.Drawing.Point(2, 41);
             this.GCSupplier.MainView = this.GVSupplier;
             this.GCSupplier.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.GCSupplier.Name = "GCSupplier";
             this.GCSupplier.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.lnkEdit,
             this.lnkDelete});
-            this.GCSupplier.Size = new System.Drawing.Size(906, 308);
+            this.GCSupplier.Size = new System.Drawing.Size(906, 316);
             this.GCSupplier.TabIndex = 0;
             this.GCSupplier.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.GVSupplier});
@@ -290,7 +289,7 @@
             this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl1.AutoSize = true;
-            this.groupControl1.CaptionImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("groupControl1.CaptionImageOptions.SvgImage")));
+            this.groupControl1.CaptionImageOptions.Image = global::EzPOS.Properties.Resources.supplier_32px;
             this.groupControl1.Controls.Add(this.label7);
             this.groupControl1.Controls.Add(this.label8);
             this.groupControl1.Controls.Add(this.label9);
@@ -378,7 +377,7 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.ImageOptions.Image")));
+            this.btnRefresh.ImageOptions.Image = global::EzPOS.Properties.Resources.refresh_32px;
             this.btnRefresh.Location = new System.Drawing.Point(562, 223);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnRefresh.Name = "btnRefresh";
@@ -389,7 +388,7 @@
             // 
             // BtnClear
             // 
-            this.BtnClear.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnClear.ImageOptions.Image")));
+            this.BtnClear.ImageOptions.Image = global::EzPOS.Properties.Resources.eraser_tool_32px;
             this.BtnClear.Location = new System.Drawing.Point(786, 223);
             this.BtnClear.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.BtnClear.Name = "BtnClear";
@@ -400,7 +399,7 @@
             // 
             // BtnSave
             // 
-            this.BtnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnSave.ImageOptions.Image")));
+            this.BtnSave.ImageOptions.Image = global::EzPOS.Properties.Resources.save_32px;
             this.BtnSave.Location = new System.Drawing.Point(674, 223);
             this.BtnSave.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.BtnSave.Name = "BtnSave";
@@ -532,6 +531,7 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(934, 709);
             this.Controls.Add(this.panelControl1);
+            this.IconOptions.Image = global::EzPOS.Properties.Resources.supplier_32px;
             this.Name = "FrmSupplier";
             this.Text = "Supplier";
             this.Load += new System.EventHandler(this.FrmEmployee_Load);

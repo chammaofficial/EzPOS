@@ -55,7 +55,16 @@ namespace EzPOS.Services
 
                 context.SaveChanges();
             }
+        }
 
+        public static void DeleteCategory(int id)
+        {
+            using (var context = new POSContext())
+            {
+                var category = context.Categories.First(x => x.Id == id);
+                context.Categories.Remove(category);
+                context.SaveChanges();
+            }
         }
     }
 }

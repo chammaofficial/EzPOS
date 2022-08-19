@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEmployee));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.GCEmployee = new DevExpress.XtraGrid.GridControl();
@@ -45,6 +44,7 @@
             this.clmnDelete = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lnkDelete = new DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
             this.BtnClear = new DevExpress.XtraEditors.SimpleButton();
             this.BtnSave = new DevExpress.XtraEditors.SimpleButton();
             this.label6 = new System.Windows.Forms.Label();
@@ -59,7 +59,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtAddress = new DevExpress.XtraEditors.TextEdit();
-            this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -95,7 +94,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl2.AutoSize = true;
-            this.groupControl2.CaptionImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("groupControl2.CaptionImageOptions.SvgImage")));
+            this.groupControl2.CaptionImageOptions.Image = global::EzPOS.Properties.Resources.list_view_32px;
             this.groupControl2.Controls.Add(this.GCEmployee);
             this.groupControl2.Location = new System.Drawing.Point(11, 330);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(9, 10, 9, 10);
@@ -108,14 +107,14 @@
             // 
             this.GCEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GCEmployee.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.GCEmployee.Location = new System.Drawing.Point(2, 49);
+            this.GCEmployee.Location = new System.Drawing.Point(2, 41);
             this.GCEmployee.MainView = this.GVEmployee;
             this.GCEmployee.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.GCEmployee.Name = "GCEmployee";
             this.GCEmployee.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.lnkEdit,
             this.lnkDelete});
-            this.GCEmployee.Size = new System.Drawing.Size(707, 308);
+            this.GCEmployee.Size = new System.Drawing.Size(707, 316);
             this.GCEmployee.TabIndex = 0;
             this.GCEmployee.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.GVEmployee});
@@ -261,7 +260,8 @@
             this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl1.AutoSize = true;
-            this.groupControl1.CaptionImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("groupControl1.CaptionImageOptions.SvgImage")));
+            this.groupControl1.CaptionImageOptions.Image = global::EzPOS.Properties.Resources.Employee_32px;
+            this.groupControl1.CaptionImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
             this.groupControl1.Controls.Add(this.btnRefresh);
             this.groupControl1.Controls.Add(this.BtnClear);
             this.groupControl1.Controls.Add(this.BtnSave);
@@ -284,9 +284,20 @@
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Employee Details";
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.ImageOptions.Image = global::EzPOS.Properties.Resources.refresh_32px;
+            this.btnRefresh.Location = new System.Drawing.Point(354, 225);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(102, 34);
+            this.btnRefresh.TabIndex = 17;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // BtnClear
             // 
-            this.BtnClear.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnClear.ImageOptions.Image")));
+            this.BtnClear.ImageOptions.Image = global::EzPOS.Properties.Resources.eraser_tool_32px;
             this.BtnClear.Location = new System.Drawing.Point(578, 225);
             this.BtnClear.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.BtnClear.Name = "BtnClear";
@@ -297,7 +308,7 @@
             // 
             // BtnSave
             // 
-            this.BtnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnSave.ImageOptions.Image")));
+            this.BtnSave.ImageOptions.Image = global::EzPOS.Properties.Resources.save_32px;
             this.BtnSave.Location = new System.Drawing.Point(466, 225);
             this.BtnSave.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.BtnSave.Name = "BtnSave";
@@ -422,17 +433,6 @@
             this.txtAddress.Size = new System.Drawing.Size(238, 23);
             this.txtAddress.TabIndex = 1;
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(354, 225);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(102, 34);
-            this.btnRefresh.TabIndex = 17;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
             // FrmEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -440,6 +440,7 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(735, 709);
             this.Controls.Add(this.panelControl1);
+            this.IconOptions.Image = global::EzPOS.Properties.Resources.Employee_32px;
             this.Name = "FrmEmployee";
             this.Text = "Employee";
             this.Load += new System.EventHandler(this.FrmEmployee_Load);

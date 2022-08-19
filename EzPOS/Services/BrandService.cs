@@ -30,7 +30,6 @@ namespace EzPOS.Services
             }
         }
 
-
         public static IEnumerable<Brand> GetAllActiveBrands()
         {
             using (var context = new POSContext())
@@ -44,6 +43,16 @@ namespace EzPOS.Services
             using (var context = new POSContext())
             {
                 return context.Brands.First(x => x.Id == id);
+            }
+        }
+
+        public static void DeleteBrand(int id)
+        {
+            using (var context = new POSContext())
+            {
+                var brand = context.Brands.First(x => x.Id == id);
+                context.Brands.Remove(brand);
+                context.SaveChanges();
             }
         }
     }

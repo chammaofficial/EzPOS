@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBrands));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.GCBrands = new DevExpress.XtraGrid.GridControl();
             this.GVBrands = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.clmnId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clmnName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clmnEdit = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lnkEdit = new DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit();
+            this.clmnDelete = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lnkDelete = new DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
@@ -76,7 +77,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl2.AutoSize = true;
-            this.groupControl2.CaptionImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("groupControl2.CaptionImageOptions.SvgImage")));
+            this.groupControl2.CaptionImageOptions.Image = global::EzPOS.Properties.Resources.list_view_32px;
             this.groupControl2.Controls.Add(this.GCBrands);
             this.groupControl2.Location = new System.Drawing.Point(11, 330);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(9, 10, 9, 10);
@@ -89,14 +90,14 @@
             // 
             this.GCBrands.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GCBrands.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.GCBrands.Location = new System.Drawing.Point(2, 49);
+            this.GCBrands.Location = new System.Drawing.Point(2, 41);
             this.GCBrands.MainView = this.GVBrands;
             this.GCBrands.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.GCBrands.Name = "GCBrands";
             this.GCBrands.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.lnkEdit,
             this.lnkDelete});
-            this.GCBrands.Size = new System.Drawing.Size(707, 308);
+            this.GCBrands.Size = new System.Drawing.Size(707, 316);
             this.GCBrands.TabIndex = 0;
             this.GCBrands.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.GVBrands});
@@ -105,7 +106,9 @@
             // 
             this.GVBrands.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.clmnId,
-            this.clmnName});
+            this.clmnName,
+            this.clmnEdit,
+            this.clmnDelete});
             this.GVBrands.DetailHeight = 546;
             this.GVBrands.GridControl = this.GCBrands;
             this.GVBrands.Name = "GVBrands";
@@ -134,6 +137,16 @@
             this.clmnName.VisibleIndex = 1;
             this.clmnName.Width = 524;
             // 
+            // clmnEdit
+            // 
+            this.clmnEdit.Caption = "Edit";
+            this.clmnEdit.ColumnEdit = this.lnkEdit;
+            this.clmnEdit.MinWidth = 25;
+            this.clmnEdit.Name = "clmnEdit";
+            this.clmnEdit.Visible = true;
+            this.clmnEdit.VisibleIndex = 2;
+            this.clmnEdit.Width = 94;
+            // 
             // lnkEdit
             // 
             this.lnkEdit.AutoHeight = false;
@@ -141,6 +154,16 @@
             this.lnkEdit.Name = "lnkEdit";
             this.lnkEdit.NullText = "Edit";
             this.lnkEdit.Click += new System.EventHandler(this.lnkEdit_Click);
+            // 
+            // clmnDelete
+            // 
+            this.clmnDelete.Caption = "Delete";
+            this.clmnDelete.ColumnEdit = this.lnkDelete;
+            this.clmnDelete.MinWidth = 25;
+            this.clmnDelete.Name = "clmnDelete";
+            this.clmnDelete.Visible = true;
+            this.clmnDelete.VisibleIndex = 3;
+            this.clmnDelete.Width = 94;
             // 
             // lnkDelete
             // 
@@ -155,7 +178,7 @@
             this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl1.AutoSize = true;
-            this.groupControl1.CaptionImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("groupControl1.CaptionImageOptions.SvgImage")));
+            this.groupControl1.CaptionImageOptions.Image = global::EzPOS.Properties.Resources.trademark_32px;
             this.groupControl1.Controls.Add(this.btnRefresh);
             this.groupControl1.Controls.Add(this.BtnClear);
             this.groupControl1.Controls.Add(this.BtnSave);
@@ -172,7 +195,7 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.ImageOptions.Image")));
+            this.btnRefresh.ImageOptions.Image = global::EzPOS.Properties.Resources.refresh_32px;
             this.btnRefresh.Location = new System.Drawing.Point(25, 194);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnRefresh.Name = "btnRefresh";
@@ -183,7 +206,7 @@
             // 
             // BtnClear
             // 
-            this.BtnClear.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnClear.ImageOptions.Image")));
+            this.BtnClear.ImageOptions.Image = global::EzPOS.Properties.Resources.eraser_tool_32px;
             this.BtnClear.Location = new System.Drawing.Point(249, 194);
             this.BtnClear.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.BtnClear.Name = "BtnClear";
@@ -194,7 +217,7 @@
             // 
             // BtnSave
             // 
-            this.BtnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnSave.ImageOptions.Image")));
+            this.BtnSave.ImageOptions.Image = global::EzPOS.Properties.Resources.save_32px;
             this.BtnSave.Location = new System.Drawing.Point(137, 194);
             this.BtnSave.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.BtnSave.Name = "BtnSave";
@@ -250,6 +273,7 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(735, 709);
             this.Controls.Add(this.panelControl1);
+            this.IconOptions.Image = global::EzPOS.Properties.Resources.trademark_32px;
             this.Name = "FrmBrands";
             this.Text = "Brand";
             this.Load += new System.EventHandler(this.FrmEmployee_Load);
@@ -289,5 +313,7 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit lnkEdit;
         private DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit lnkDelete;
         private DevExpress.XtraEditors.SimpleButton btnRefresh;
+        private DevExpress.XtraGrid.Columns.GridColumn clmnEdit;
+        private DevExpress.XtraGrid.Columns.GridColumn clmnDelete;
     }
 }

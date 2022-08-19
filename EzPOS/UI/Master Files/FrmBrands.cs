@@ -53,18 +53,15 @@ namespace EzPOS.UI.Master_Files
 
         private void lnkDelete_Click(object sender, EventArgs e)
         {
-            //TempBrand = BrandService.GetBrandById(int.Parse(GVBrands.GetRowCellValue(GVBrands.FocusedRowHandle, clmnId).ToString()));
-            //TempBrand.IsActive = false;
-            //if (TempBrand.Validate() == true)
-            //{
-            //    if (Alerts.Confirm("Are sure want to remove this customer ?. This operation cannot be reversed!.") == DialogResult.Yes)
-            //    {
-            //        BrandService.SaveBrand(TempBrand);
-            //        Clear();
-            //    }
-            //}
-            //LoadData();
-            //TempBrand = new Brand();
+            TempBrand = BrandService.GetBrandById(int.Parse(GVBrands.GetRowCellValue(GVBrands.FocusedRowHandle, clmnId).ToString()));
+            if (Alerts.Confirm("Are sure want to remove this brand ?. This operation cannot be reversed!.") == DialogResult.Yes)
+            {
+                BrandService.DeleteBrand(TempBrand.Id);
+                Clear();
+            }
+            
+            LoadData();
+            TempBrand = new Brand();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)

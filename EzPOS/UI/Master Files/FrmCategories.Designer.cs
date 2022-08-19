@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCategories));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.GCCategory = new DevExpress.XtraGrid.GridControl();
@@ -42,6 +41,8 @@
             this.clmnDelete = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lnkDelete = new DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.chkSubCategory = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
             this.BtnClear = new DevExpress.XtraEditors.SimpleButton();
             this.BtnSave = new DevExpress.XtraEditors.SimpleButton();
@@ -87,7 +88,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl2.AutoSize = true;
-            this.groupControl2.CaptionImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("groupControl2.CaptionImageOptions.SvgImage")));
+            this.groupControl2.CaptionImageOptions.Image = global::EzPOS.Properties.Resources.list_view_32px;
             this.groupControl2.Controls.Add(this.GCCategory);
             this.groupControl2.Location = new System.Drawing.Point(11, 330);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(9, 10, 9, 10);
@@ -100,14 +101,14 @@
             // 
             this.GCCategory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GCCategory.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.GCCategory.Location = new System.Drawing.Point(2, 49);
+            this.GCCategory.Location = new System.Drawing.Point(2, 41);
             this.GCCategory.MainView = this.GVCategory;
             this.GCCategory.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.GCCategory.Name = "GCCategory";
             this.GCCategory.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.lnkEdit,
             this.lnkDelete});
-            this.GCCategory.Size = new System.Drawing.Size(707, 308);
+            this.GCCategory.Size = new System.Drawing.Size(707, 316);
             this.GCCategory.TabIndex = 0;
             this.GCCategory.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.GVCategory});
@@ -214,7 +215,9 @@
             this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl1.AutoSize = true;
-            this.groupControl1.CaptionImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("groupControl1.CaptionImageOptions.SvgImage")));
+            this.groupControl1.CaptionImageOptions.Image = global::EzPOS.Properties.Resources.categorize_32px;
+            this.groupControl1.Controls.Add(this.chkSubCategory);
+            this.groupControl1.Controls.Add(this.label4);
             this.groupControl1.Controls.Add(this.btnRefresh);
             this.groupControl1.Controls.Add(this.BtnClear);
             this.groupControl1.Controls.Add(this.BtnSave);
@@ -231,9 +234,31 @@
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Employee Details";
             // 
+            // chkSubCategory
+            // 
+            this.chkSubCategory.AutoSize = true;
+            this.chkSubCategory.Location = new System.Drawing.Point(149, 158);
+            this.chkSubCategory.Name = "chkSubCategory";
+            this.chkSubCategory.Size = new System.Drawing.Size(106, 20);
+            this.chkSubCategory.TabIndex = 19;
+            this.chkSubCategory.Text = "Sub Category";
+            this.chkSubCategory.UseVisualStyleBackColor = true;
+            this.chkSubCategory.CheckStateChanged += new System.EventHandler(this.chkSubCategory_CheckStateChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(32, 158);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(106, 18);
+            this.label4.TabIndex = 18;
+            this.label4.Text = "Sub Category :";
+            // 
             // btnRefresh
             // 
-            this.btnRefresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.ImageOptions.Image")));
+            this.btnRefresh.ImageOptions.Image = global::EzPOS.Properties.Resources.refresh_32px;
             this.btnRefresh.Location = new System.Drawing.Point(61, 235);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnRefresh.Name = "btnRefresh";
@@ -244,7 +269,7 @@
             // 
             // BtnClear
             // 
-            this.BtnClear.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnClear.ImageOptions.Image")));
+            this.BtnClear.ImageOptions.Image = global::EzPOS.Properties.Resources.eraser_tool_32px;
             this.BtnClear.Location = new System.Drawing.Point(285, 235);
             this.BtnClear.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.BtnClear.Name = "BtnClear";
@@ -255,7 +280,7 @@
             // 
             // BtnSave
             // 
-            this.BtnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnSave.ImageOptions.Image")));
+            this.BtnSave.ImageOptions.Image = global::EzPOS.Properties.Resources.save_32px;
             this.BtnSave.Location = new System.Drawing.Point(173, 235);
             this.BtnSave.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.BtnSave.Name = "BtnSave";
@@ -277,7 +302,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(149, 137);
+            this.txtName.Location = new System.Drawing.Point(149, 121);
             this.txtName.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(238, 23);
@@ -297,7 +322,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(81, 138);
+            this.label2.Location = new System.Drawing.Point(81, 122);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 18);
@@ -317,6 +342,7 @@
             // 
             // txtParentCategory
             // 
+            this.txtParentCategory.Enabled = false;
             this.txtParentCategory.Location = new System.Drawing.Point(149, 188);
             this.txtParentCategory.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.txtParentCategory.Name = "txtParentCategory";
@@ -362,6 +388,7 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(735, 709);
             this.Controls.Add(this.panelControl1);
+            this.IconOptions.Image = global::EzPOS.Properties.Resources.categorize_32px;
             this.Name = "FrmCategories";
             this.Text = "Category";
             this.Load += new System.EventHandler(this.FrmEmployee_Load);
@@ -412,5 +439,7 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
         private DevExpress.XtraGrid.Columns.GridColumn clmnParentId;
         private DevExpress.XtraGrid.Columns.GridColumn clmnParentName;
+        private System.Windows.Forms.CheckBox chkSubCategory;
+        private System.Windows.Forms.Label label4;
     }
 }

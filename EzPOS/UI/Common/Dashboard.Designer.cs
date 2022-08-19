@@ -37,12 +37,16 @@
             this.lblDateTime = new DevExpress.XtraBars.BarStaticItem();
             this.barBtnSupplier = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnCustomer = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnBrands = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnCategories = new DevExpress.XtraBars.BarButtonItem();
             this.menuAdministration = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.functionBranches = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.menuMasterFiles = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -53,10 +57,6 @@
             this.TimerDateTime = new System.Windows.Forms.Timer(this.components);
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
-            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.barBtnBrands = new DevExpress.XtraBars.BarButtonItem();
-            this.barBtnCategories = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -108,8 +108,7 @@
             // 
             this.barBtnEmployee.Caption = "Employees";
             this.barBtnEmployee.Id = 4;
-            this.barBtnEmployee.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barBtnEmployee.ImageOptions.Image")));
-            this.barBtnEmployee.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtnEmployee.ImageOptions.LargeImage")));
+            this.barBtnEmployee.ImageOptions.Image = global::EzPOS.Properties.Resources.Employee_48px;
             this.barBtnEmployee.Name = "barBtnEmployee";
             this.barBtnEmployee.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -131,8 +130,7 @@
             // 
             this.barBtnSupplier.Caption = "Suppliers";
             this.barBtnSupplier.Id = 9;
-            this.barBtnSupplier.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barBtnSupplier.ImageOptions.Image")));
-            this.barBtnSupplier.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtnSupplier.ImageOptions.LargeImage")));
+            this.barBtnSupplier.ImageOptions.Image = global::EzPOS.Properties.Resources.supplier_48px;
             this.barBtnSupplier.Name = "barBtnSupplier";
             this.barBtnSupplier.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
@@ -142,12 +140,31 @@
             // 
             this.barBtnCustomer.Caption = "Customers";
             this.barBtnCustomer.Id = 10;
-            this.barBtnCustomer.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barBtnCustomer.ImageOptions.Image")));
-            this.barBtnCustomer.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtnCustomer.ImageOptions.LargeImage")));
+            this.barBtnCustomer.ImageOptions.Image = global::EzPOS.Properties.Resources.Customer_48px;
             this.barBtnCustomer.Name = "barBtnCustomer";
             this.barBtnCustomer.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
             | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             this.barBtnCustomer.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnCustomer_ItemClick);
+            // 
+            // barBtnBrands
+            // 
+            this.barBtnBrands.Caption = "Brands";
+            this.barBtnBrands.Id = 11;
+            this.barBtnBrands.ImageOptions.Image = global::EzPOS.Properties.Resources.trademark_48px;
+            this.barBtnBrands.Name = "barBtnBrands";
+            this.barBtnBrands.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.barBtnBrands.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnBrands_ItemClick);
+            // 
+            // barBtnCategories
+            // 
+            this.barBtnCategories.Caption = "Categories";
+            this.barBtnCategories.Id = 12;
+            this.barBtnCategories.ImageOptions.Image = global::EzPOS.Properties.Resources.categorize_48px;
+            this.barBtnCategories.Name = "barBtnCategories";
+            this.barBtnCategories.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.barBtnCategories.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnCategories_ItemClick);
             // 
             // menuAdministration
             // 
@@ -193,6 +210,20 @@
             this.ribbonPageGroup6.ItemLinks.Add(this.barBtnCustomer);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             this.ribbonPageGroup6.Text = "Customer Master";
+            // 
+            // ribbonPageGroup7
+            // 
+            this.ribbonPageGroup7.AllowTextClipping = false;
+            this.ribbonPageGroup7.ItemLinks.Add(this.barBtnBrands);
+            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
+            this.ribbonPageGroup7.Text = "Brands Master";
+            // 
+            // ribbonPageGroup8
+            // 
+            this.ribbonPageGroup8.AllowTextClipping = false;
+            this.ribbonPageGroup8.ItemLinks.Add(this.barBtnCategories);
+            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
+            this.ribbonPageGroup8.Text = "Categories Master";
             // 
             // ribbonPage1
             // 
@@ -247,38 +278,6 @@
             this.documentManager1.View = this.tabbedView1;
             this.documentManager1.ViewCollection.AddRange(new DevExpress.XtraBars.Docking2010.Views.BaseView[] {
             this.tabbedView1});
-            // 
-            // ribbonPageGroup7
-            // 
-            this.ribbonPageGroup7.AllowTextClipping = false;
-            this.ribbonPageGroup7.ItemLinks.Add(this.barBtnBrands);
-            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
-            this.ribbonPageGroup7.Text = "Brands Master";
-            // 
-            // ribbonPageGroup8
-            // 
-            this.ribbonPageGroup8.AllowTextClipping = false;
-            this.ribbonPageGroup8.ItemLinks.Add(this.barBtnCategories);
-            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
-            this.ribbonPageGroup8.Text = "Categories Master";
-            // 
-            // barBtnBrands
-            // 
-            this.barBtnBrands.Caption = "Brands";
-            this.barBtnBrands.Id = 11;
-            this.barBtnBrands.Name = "barBtnBrands";
-            this.barBtnBrands.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.barBtnBrands.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnBrands_ItemClick);
-            // 
-            // barBtnCategories
-            // 
-            this.barBtnCategories.Caption = "Categories";
-            this.barBtnCategories.Id = 12;
-            this.barBtnCategories.Name = "barBtnCategories";
-            this.barBtnCategories.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
-            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
-            this.barBtnCategories.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnCategories_ItemClick);
             // 
             // Dashboard
             // 

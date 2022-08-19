@@ -36,11 +36,17 @@ namespace EzPOS.UI.Master_Files
         {
             TempCategory.Name = txtName.Text;
 
-            if (txtParentCategory.EditValue != null)
+            if (chkSubCategory.Checked)
             {
                 TempCategory.IsSubCategory = true;
                 TempCategory.CategoryId = (int) txtParentCategory.EditValue;
             }
+            else
+            {
+                TempCategory.IsSubCategory = false;
+                TempCategory.CategoryId = null;
+            }
+
             if (TempCategory.Validate() == true)
             {
                 if (Alerts.Confirm("Are sure want to save this Category ?") == DialogResult.Yes)
@@ -70,24 +76,27 @@ namespace EzPOS.UI.Master_Files
 
         private void lnkDelete_Click(object sender, EventArgs e)
         {
-            //TempEmployee = EmployeeService.GetEmployeeById(int.Parse(GVCategory.GetRowCellValue(GVCategory.FocusedRowHandle, clmnId).ToString()));
-            //TempEmployee.IsActive = false;
-
-            //if (TempEmployee.Validate() == true)
-            //{
-            //    if (Alerts.Confirm("Are sure want to remove this employee ?. This operation cannot be reversed!.") == DialogResult.Yes)
-            //    {
-            //        EmployeeService.SaveEmployee(TempEmployee);
-            //        Clear();
-            //    }
-            //}
-            //LoadData();
-            //TempEmployee = new Models.Employee();
+            TempCategory = CategoryService.GetCategoryById(int.Parse(GVCategory.GetRowCellValue(GVCategory.FocusedRowHandle, clmnId).ToString()));
+            if (Alerts.Confirm("Are sure want to remove this category ?. This operation cannot be reversed!.") == DialogResult.Yes)
+            {
+                CategoryService.DeleteCategory(TempCategory.Id);
+                Clear();
+            }
+            LoadData();
+            TempCategory = new Category();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             LoadData();
+        }
+
+        private void chkSubCategory_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (chkSubCategory.CheckState == CheckState.Checked)
+                txtParentCategory.Enabled = true;
+            else
+                txtParentCategory.Enabled = false;
         }
     }
 }
