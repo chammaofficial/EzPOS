@@ -209,6 +209,10 @@
     <Compile Include="Migrations\202208191617101_Add Purchase Order Tables.designer.cs">
       <DependentUpon>202208191617101_Add Purchase Order Tables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202208200510096_PO Table Update.cs" />
+    <Compile Include="Migrations\202208200510096_PO Table Update.designer.cs">
+      <DependentUpon>202208200510096_PO Table Update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\ProductSerial.cs" />
     <Compile Include="Models\BarcodeConfiguration.cs" />
@@ -220,6 +224,7 @@
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductStatusCode.cs" />
     <Compile Include="Models\PurchaseOrderDetail.cs" />
+    <Compile Include="Models\Settings.cs" />
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\User.cs" />
@@ -230,6 +235,20 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSets\Purchase\DataSetPurchaseOrder.cs">
+      <DependentUpon>DataSetPurchaseOrder.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\DataSets\Purchase\DataSetPurchaseOrder.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPurchaseOrder.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportFiles\Purchase\PurchaseOrderReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ReportFiles\Purchase\PurchaseOrderReport.Designer.cs">
+      <DependentUpon>PurchaseOrderReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Services\ProductService.cs" />
     <Compile Include="Services\ProductStatusCodeService.cs" />
@@ -313,6 +332,24 @@
     <Compile Include="UI\Purchase\FrmPurchaseOrder.Designer.cs">
       <DependentUpon>FrmPurchaseOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Purchase\FrmPurchaseOrderDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Purchase\FrmPurchaseOrderDetails.Designer.cs">
+      <DependentUpon>FrmPurchaseOrderDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\FrmBusinessSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Settings\FrmBusinessSettings.Designer.cs">
+      <DependentUpon>FrmBusinessSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\FrmTaxSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Settings\FrmTaxSettings.Designer.cs">
+      <DependentUpon>FrmTaxSettings.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Migrations\202208141751028_Initiate.resx">
       <DependentUpon>202208141751028_Initiate.cs</DependentUpon>
     </EmbeddedResource>
@@ -355,11 +392,17 @@
     <EmbeddedResource Include="Migrations\202208191617101_Add Purchase Order Tables.resx">
       <DependentUpon>202208191617101_Add Purchase Order Tables.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208200510096_PO Table Update.resx">
+      <DependentUpon>202208200510096_PO Table Update.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportFiles\Purchase\PurchaseOrderReport.resx">
+      <DependentUpon>PurchaseOrderReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Common\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
@@ -397,6 +440,15 @@
     <EmbeddedResource Include="UI\Purchase\FrmPurchaseOrder.resx">
       <DependentUpon>FrmPurchaseOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Purchase\FrmPurchaseOrderDetails.resx">
+      <DependentUpon>FrmPurchaseOrderDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Settings\FrmBusinessSettings.resx">
+      <DependentUpon>FrmBusinessSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Settings\FrmTaxSettings.resx">
+      <DependentUpon>FrmTaxSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -416,6 +468,32 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
+    <None Include="Resources\tax_48px.png" />
+    <None Include="Resources\tax_32px.png" />
+    <None Include="Resources\image_placeholder.png" />
+    <None Include="Resources\upload_32px - Copy.png" />
+    <None Include="Resources\Business_settings_48.png" />
+    <None Include="Resources\Business_settings_32.png" />
+    <None Include="Resources\template_32px.png" />
+    <None Include="Resources\summer_sales_32px.png" />
+    <None Include="Resources\settings_32px.png" />
+    <None Include="Resources\Reports_32px.png" />
+    <None Include="Resources\purchase_for_euro_32px.png" />
+    <None Include="Resources\home_32px.png" />
+    <None Include="Resources\contacts_32px.png" />
+    <None Include="Resources\Branch operations_32px.png" />
+    <None Include="Resources\Accounts_32px.png" />
+    <None Include="Reports\DataSets\Purchase\DataSetPurchaseOrder.xsc">
+      <DependentUpon>DataSetPurchaseOrder.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSets\Purchase\DataSetPurchaseOrder.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPurchaseOrder.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\DataSets\Purchase\DataSetPurchaseOrder.xss">
+      <DependentUpon>DataSetPurchaseOrder.xsd</DependentUpon>
+    </None>
     <None Include="Resources\Supplier_Payment_48px.png" />
     <None Include="Resources\Stock Receiving_book_48px.png" />
     <None Include="Resources\Stock Receiving_book_32px.png" />

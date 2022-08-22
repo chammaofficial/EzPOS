@@ -44,6 +44,8 @@
             this.clmnPOHeadUpdateDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clmnPOHeadPODetails = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lnkPODetails = new DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit();
+            this.clmnPrintPO = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.lnkPrint = new DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit();
             this.clmnEdit = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lnkEdit = new DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit();
             this.clmnDelete = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -70,6 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.GCPOHeader)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GVPOHeader)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lnkPODetails)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lnkPrint)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lnkEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lnkDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -110,7 +113,8 @@
             this.GCPOHeader.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.lnkEdit,
             this.lnkDelete,
-            this.lnkPODetails});
+            this.lnkPODetails,
+            this.lnkPrint});
             this.GCPOHeader.Size = new System.Drawing.Size(1057, 349);
             this.GCPOHeader.TabIndex = 0;
             this.GCPOHeader.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -131,11 +135,13 @@
             this.clmnPOHeadUpdateBy,
             this.clmnPOHeadUpdateDate,
             this.clmnPOHeadPODetails,
+            this.clmnPrintPO,
             this.clmnEdit,
             this.clmnDelete});
             this.GVPOHeader.DetailHeight = 546;
             this.GVPOHeader.GridControl = this.GCPOHeader;
             this.GVPOHeader.Name = "GVPOHeader";
+            this.GVPOHeader.OptionsBehavior.ReadOnly = true;
             // 
             // clmnPOHeadId
             // 
@@ -267,6 +273,26 @@
             this.lnkPODetails.Caption = "PO Details";
             this.lnkPODetails.Name = "lnkPODetails";
             this.lnkPODetails.NullText = "PO Details";
+            this.lnkPODetails.Click += new System.EventHandler(this.lnkPODetails_Click);
+            // 
+            // clmnPrintPO
+            // 
+            this.clmnPrintPO.Caption = "Print";
+            this.clmnPrintPO.ColumnEdit = this.lnkPrint;
+            this.clmnPrintPO.FieldName = "Print";
+            this.clmnPrintPO.MinWidth = 25;
+            this.clmnPrintPO.Name = "clmnPrintPO";
+            this.clmnPrintPO.Visible = true;
+            this.clmnPrintPO.VisibleIndex = 9;
+            this.clmnPrintPO.Width = 94;
+            // 
+            // lnkPrint
+            // 
+            this.lnkPrint.AutoHeight = false;
+            this.lnkPrint.Caption = "Print";
+            this.lnkPrint.Name = "lnkPrint";
+            this.lnkPrint.NullText = "Print";
+            this.lnkPrint.Click += new System.EventHandler(this.lnkPrint_Click);
             // 
             // clmnEdit
             // 
@@ -275,7 +301,7 @@
             this.clmnEdit.MinWidth = 25;
             this.clmnEdit.Name = "clmnEdit";
             this.clmnEdit.Visible = true;
-            this.clmnEdit.VisibleIndex = 9;
+            this.clmnEdit.VisibleIndex = 10;
             this.clmnEdit.Width = 94;
             // 
             // lnkEdit
@@ -293,7 +319,7 @@
             this.clmnDelete.MinWidth = 25;
             this.clmnDelete.Name = "clmnDelete";
             this.clmnDelete.Visible = true;
-            this.clmnDelete.VisibleIndex = 10;
+            this.clmnDelete.VisibleIndex = 11;
             this.clmnDelete.Width = 94;
             // 
             // lnkDelete
@@ -527,6 +553,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.GCPOHeader)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GVPOHeader)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lnkPODetails)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lnkPrint)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lnkEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lnkDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
@@ -563,14 +590,12 @@
         private DevExpress.XtraEditors.SimpleButton btnRefresh;
         private DevExpress.XtraEditors.SimpleButton BtnClear;
         private DevExpress.XtraEditors.SimpleButton BtnSave;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private DevExpress.XtraEditors.TextEdit txtRemark;
         private DevExpress.XtraEditors.TextEdit txtPOId;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.DateEdit txtDeliveryDate;
         private DevExpress.XtraEditors.DateEdit txtPODate;
         private DevExpress.XtraEditors.GridLookUpEdit txtSupplier;
         private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
@@ -584,5 +609,9 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit lnkPODetails;
         private DevExpress.XtraGrid.Columns.GridColumn clmnSupId;
         private DevExpress.XtraGrid.Columns.GridColumn clmnSupName;
+        private System.Windows.Forms.Label label6;
+        private DevExpress.XtraEditors.DateEdit txtDeliveryDate;
+        private DevExpress.XtraGrid.Columns.GridColumn clmnPrintPO;
+        private DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit lnkPrint;
     }
 }

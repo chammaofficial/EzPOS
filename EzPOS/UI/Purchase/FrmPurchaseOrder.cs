@@ -8,8 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using DevExpress.XtraReports.UI;
 using EzPOS.Helpers;
 using EzPOS.Models;
+using EzPOS.Reports.DataSets.Purchase;
+using EzPOS.Reports.DataSets.Purchase.DataSetPurchaseOrderTableAdapters;
+using EzPOS.Reports.ReportFiles.Purchase;
 using EzPOS.Services;
 
 namespace EzPOS.UI.Purchase
@@ -17,10 +21,13 @@ namespace EzPOS.UI.Purchase
     public partial class FrmPurchaseOrder : DevExpress.XtraEditors.XtraForm
     {
         private PurchaseOrder tempPurchaseOrder;
+        private PurchaseOrderService purchaseOrderService;
         public FrmPurchaseOrder()
         {
             InitializeComponent();
             tempPurchaseOrder = new PurchaseOrder();
+            var context = new POSContext();
+            purchaseOrderService = new PurchaseOrderService(context);
         }
 
         private void FrmPurchaseOrder_Load(object sender, EventArgs e)
@@ -30,8 +37,11 @@ namespace EzPOS.UI.Purchase
 
         private void LoadData()
         {
-            txtSupplier.Properties.DataSource = PurchaseOrderService.GetSuppliers();
-            GCPOHeader.DataSource = PurchaseOrderService.GetAllActivePurchaseOrders();
+            var POHeads = purchaseOrderService.GetAllActivePurchaseOrders();
+            var Suppliers = purchaseOrderService.GetSuppliers();
+
+            txtSupplier.Properties.DataSource = Suppliers;
+            GCPOHeader.DataSource = POHeads;
         }
 
         private void BtnClear_Click(object sender, EventArgs e)
@@ -63,7 +73,7 @@ namespace EzPOS.UI.Purchase
             {
                 if (Alerts.Confirm("Are sure want to save this Purchase Order ?") == DialogResult.Yes)
                 {
-                    PurchaseOrderService.SavePurchaseOrderHeader(tempPurchaseOrder);
+                    purchaseOrderService.SavePurchaseOrderHeader(tempPurchaseOrder);
                     Clear();
                 }
             }
@@ -77,7 +87,7 @@ namespace EzPOS.UI.Purchase
 
         private void lnkDelete_Click(object sender, EventArgs e)
         {
-            tempPurchaseOrder = PurchaseOrderService.GetPurchaseOrderById(int.Parse(GVPOHeader.GetRowCellValue(GVPOHeader.FocusedRowHandle, clmnPOHeadId).ToString()));
+            tempPurchaseOrder = purchaseOrderService.GetPurchaseOrderById(int.Parse(GVPOHeader.GetRowCellValue(GVPOHeader.FocusedRowHandle, clmnPOHeadId).ToString()));
             tempPurchaseOrder.IsActive = false;
             tempPurchaseOrder.Status = "Canceled";
 
@@ -85,7 +95,7 @@ namespace EzPOS.UI.Purchase
             {
                 if (Alerts.Confirm("Are sure want to remove this customer ?. This operation cannot be reversed!.") == DialogResult.Yes)
                 {
-                    PurchaseOrderService.SavePurchaseOrderHeader(tempPurchaseOrder);
+                    purchaseOrderService.SavePurchaseOrderHeader(tempPurchaseOrder);
                     Clear();
                 }
             }
@@ -95,11 +105,31 @@ namespace EzPOS.UI.Purchase
 
         private void lnkEdit_Click(object sender, EventArgs e)
         {
-            tempPurchaseOrder = PurchaseOrderService.GetPurchaseOrderById(int.Parse(GVPOHeader.GetRowCellValue(GVPOHeader.FocusedRowHandle, clmnPOHeadId).ToString()));
+            tempPurchaseOrder = purchaseOrderService.GetPurchaseOrderById(int.Parse(GVPOHeader.GetRowCellValue(GVPOHeader.FocusedRowHandle, clmnPOHeadId).ToString()));
             txtPODate.EditValue = tempPurchaseOrder.PoDate;
             txtSupplier.EditValue = tempPurchaseOrder.SupplierId;
             txtDeliveryDate.EditValue = tempPurchaseOrder.DeliveryDate;
             txtRemark.EditValue = tempPurchaseOrder.Remark;
+        }
+
+        private void lnkPODetails_Click(object sender, EventArgs e)
+        {
+            int POID = int.Parse(GVPOHeader.GetRowCellValue(GVPOHeader.FocusedRowHandle, clmnPOHeadId).ToString());
+            FrmPurchaseOrderDetails form = new FrmPurchaseOrderDetails(purchaseOrderService, POID);
+            form.MdiParent = this.MdiParent;
+            form.Show();
+        }
+
+        private void lnkPrint_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(GVPOHeader.GetRowCellValue(GVPOHeader.FocusedRowHandle, clmnPOHeadId).ToString());
+            Reports.ReportFiles.Purchase.PurchaseOrderReport report = new PurchaseOrderReport();
+            Reports.DataSets.Purchase.DataSetPurchaseOrder.PurchaseOrderReportDataTable table = new DataSetPurchaseOrder.PurchaseOrderReportDataTable();
+            Reports.DataSets.Purchase.DataSetPurchaseOrderTableAdapters.PurchaseOrderReportTableAdapter Adapter = new PurchaseOrderReportTableAdapter();
+            Adapter.Fill(table, id);
+            report.DataSource = table;
+            report.ShowPreview();
+
         }
     }
 }

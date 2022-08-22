@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using EzPOS.UI;
 using EzPOS.UI.Master_Files;
 using EzPOS.UI.Purchase;
+using EzPOS.UI.Settings;
 
 namespace EzPOS.UI.Common
 {
@@ -85,6 +86,20 @@ namespace EzPOS.UI.Common
         private void barBtnPurchaseOrder_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             FrmPurchaseOrder form = new FrmPurchaseOrder();
+            form.MdiParent = documentManager1.MdiParent;
+            form.Show();
+        }
+
+        private void barBtnBusinessSettings_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmBusinessSettings form = new FrmBusinessSettings();
+            form.MdiParent = documentManager1.MdiParent;
+            form.Show();
+        }
+
+        private void barBtnTaxSettings_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmTaxSettings form = new FrmTaxSettings();
             form.MdiParent = documentManager1.MdiParent;
             form.Show();
         }

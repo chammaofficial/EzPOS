@@ -18,6 +18,9 @@ namespace EzPOS.Models
         
         [Required]
         public decimal OrderQty { get; set; }
+
+        [Required] 
+        public decimal ReceivedQty { get; set; }
         
         [Required]
         public decimal BalanceQty { get; set; }
