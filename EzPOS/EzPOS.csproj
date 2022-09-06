@@ -148,6 +148,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums.cs" />
     <Compile Include="Helpers\Alerts.cs" />
     <Compile Include="Helpers\EncryptionService.cs" />
     <Compile Include="Helpers\EntityValidators.cs" />
@@ -213,18 +214,51 @@
     <Compile Include="Migrations\202208200510096_PO Table Update.designer.cs">
       <DependentUpon>202208200510096_PO Table Update.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202209061434147_Add Business Locations.cs" />
+    <Compile Include="Migrations\202209061434147_Add Business Locations.designer.cs">
+      <DependentUpon>202209061434147_Add Business Locations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202209061440296_Add Currencies Table.cs" />
+    <Compile Include="Migrations\202209061440296_Add Currencies Table.designer.cs">
+      <DependentUpon>202209061440296_Add Currencies Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202209061441116_Seed Currencies.cs" />
+    <Compile Include="Migrations\202209061441116_Seed Currencies.designer.cs">
+      <DependentUpon>202209061441116_Seed Currencies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202209061452300_Add Business Settings Table.cs" />
+    <Compile Include="Migrations\202209061452300_Add Business Settings Table.designer.cs">
+      <DependentUpon>202209061452300_Add Business Settings Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202209061458229_Change Bussiness Location to Branches.cs" />
+    <Compile Include="Migrations\202209061458229_Change Bussiness Location to Branches.designer.cs">
+      <DependentUpon>202209061458229_Change Bussiness Location to Branches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202209061522533_Changes in Business Setting.cs" />
+    <Compile Include="Migrations\202209061522533_Changes in Business Setting.designer.cs">
+      <DependentUpon>202209061522533_Changes in Business Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202209061631368_Made Branch Code Unique in Model.cs" />
+    <Compile Include="Migrations\202209061631368_Made Branch Code Unique in Model.designer.cs">
+      <DependentUpon>202209061631368_Made Branch Code Unique in Model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202209061639314_Add Active status to Branch.cs" />
+    <Compile Include="Migrations\202209061639314_Add Active status to Branch.designer.cs">
+      <DependentUpon>202209061639314_Add Active status to Branch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\ProductSerial.cs" />
     <Compile Include="Models\BarcodeConfiguration.cs" />
     <Compile Include="Models\Branch.cs" />
     <Compile Include="Models\Brand.cs" />
+    <Compile Include="Models\BusinessSetting.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Currency.cs" />
     <Compile Include="Models\PurchaseOrder.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductStatusCode.cs" />
     <Compile Include="Models\PurchaseOrderDetail.cs" />
-    <Compile Include="Models\Settings.cs" />
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\User.cs" />
@@ -250,6 +284,7 @@
     <Compile Include="Reports\ReportFiles\Purchase\PurchaseOrderReport.Designer.cs">
       <DependentUpon>PurchaseOrderReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Services\BranchService.cs" />
     <Compile Include="Services\ProductService.cs" />
     <Compile Include="Services\ProductStatusCodeService.cs" />
     <Compile Include="Services\BrandService.cs" />
@@ -338,11 +373,23 @@
     <Compile Include="UI\Purchase\FrmPurchaseOrderDetails.Designer.cs">
       <DependentUpon>FrmPurchaseOrderDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Settings\FrmBranches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Settings\FrmBranches.Designer.cs">
+      <DependentUpon>FrmBranches.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Settings\FrmBusinessSettings.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Settings\FrmBusinessSettings.Designer.cs">
       <DependentUpon>FrmBusinessSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\FrmSalesSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Settings\FrmSalesSettings.Designer.cs">
+      <DependentUpon>FrmSalesSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Settings\FrmTaxSettings.cs">
       <SubType>Form</SubType>
@@ -395,6 +442,30 @@
     <EmbeddedResource Include="Migrations\202208200510096_PO Table Update.resx">
       <DependentUpon>202208200510096_PO Table Update.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209061434147_Add Business Locations.resx">
+      <DependentUpon>202209061434147_Add Business Locations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209061440296_Add Currencies Table.resx">
+      <DependentUpon>202209061440296_Add Currencies Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209061441116_Seed Currencies.resx">
+      <DependentUpon>202209061441116_Seed Currencies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209061452300_Add Business Settings Table.resx">
+      <DependentUpon>202209061452300_Add Business Settings Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209061458229_Change Bussiness Location to Branches.resx">
+      <DependentUpon>202209061458229_Change Bussiness Location to Branches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209061522533_Changes in Business Setting.resx">
+      <DependentUpon>202209061522533_Changes in Business Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209061631368_Made Branch Code Unique in Model.resx">
+      <DependentUpon>202209061631368_Made Branch Code Unique in Model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209061639314_Add Active status to Branch.resx">
+      <DependentUpon>202209061639314_Add Active status to Branch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -443,8 +514,14 @@
     <EmbeddedResource Include="UI\Purchase\FrmPurchaseOrderDetails.resx">
       <DependentUpon>FrmPurchaseOrderDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Settings\FrmBranches.resx">
+      <DependentUpon>FrmBranches.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Settings\FrmBusinessSettings.resx">
       <DependentUpon>FrmBusinessSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Settings\FrmSalesSettings.resx">
+      <DependentUpon>FrmSalesSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Settings\FrmTaxSettings.resx">
       <DependentUpon>FrmTaxSettings.cs</DependentUpon>

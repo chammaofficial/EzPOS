@@ -17,6 +17,7 @@ namespace EzPOS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Enums.Initilize();
             Application.Run(new Login());
         }
     }

@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace EzPOS.Models
 {
-    public class Settings
+    public class Currency
     {
         public int Id { get; set; }
-        public string BusinessName { get; set; }
-        public string BusinessAddress { get; set; }
-       
+        public string Name { get; set; }
+        public string Symbol { get; set; }
     }
 }

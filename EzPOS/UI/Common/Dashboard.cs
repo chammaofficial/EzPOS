@@ -103,5 +103,12 @@ namespace EzPOS.UI.Common
             form.MdiParent = documentManager1.MdiParent;
             form.Show();
         }
+
+        private void barBtnBranches_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmBranches form = new FrmBranches();
+            form.MdiParent = documentManager1.MdiParent;
+            form.Show();
+        }
     }
 }

@@ -16,7 +16,8 @@ namespace EzPOS
         public DbSet<Product> Products { get; set; }
         public DbSet<PurchaseOrder> PurchaseOrders { get; set; }
         public DbSet<PurchaseOrderDetail> PurchaseOrderDetails { get; set; }
-
+        public DbSet<Currency> Currencies { get; set; }
+        public DbSet<BusinessSetting> BusinessSettings { get; set; }
 
 
 
