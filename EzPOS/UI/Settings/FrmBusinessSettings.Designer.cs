@@ -30,9 +30,7 @@
         {
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.BtnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.textEdit13 = new DevExpress.XtraEditors.TextEdit();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.textEdit12 = new DevExpress.XtraEditors.TextEdit();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -42,17 +40,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtTransactionEditDays = new DevExpress.XtraEditors.TextEdit();
             this.label8 = new System.Windows.Forms.Label();
-            this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
             this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtCurrency = new DevExpress.XtraEditors.TextEdit();
             this.label6 = new System.Windows.Forms.Label();
             this.txtDefaultProfitPrecentage = new DevExpress.XtraEditors.TextEdit();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBusinessName = new DevExpress.XtraEditors.TextEdit();
             this.dteStartDate = new DevExpress.XtraEditors.DateEdit();
@@ -61,17 +55,19 @@
             this.textEdit10 = new DevExpress.XtraEditors.GridLookUpEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.textEdit3 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txtCurrency = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.textEdit2 = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.textEdit8 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.textEdit13 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.textEdit12 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.textEdit4 = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTransactionEditDays.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCurrency.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDefaultProfitPrecentage.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBusinessName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteStartDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteStartDate.Properties)).BeginInit();
@@ -80,6 +76,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCurrency.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -88,9 +92,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl1.CaptionImageOptions.Image = global::EzPOS.Properties.Resources.Business_settings_32;
             this.groupControl1.Controls.Add(this.BtnSave);
-            this.groupControl1.Controls.Add(this.textEdit13);
             this.groupControl1.Controls.Add(this.simpleButton1);
-            this.groupControl1.Controls.Add(this.textEdit12);
             this.groupControl1.Controls.Add(this.pictureBox1);
             this.groupControl1.Controls.Add(this.label14);
             this.groupControl1.Controls.Add(this.label13);
@@ -100,23 +102,25 @@
             this.groupControl1.Controls.Add(this.label7);
             this.groupControl1.Controls.Add(this.txtTransactionEditDays);
             this.groupControl1.Controls.Add(this.label8);
-            this.groupControl1.Controls.Add(this.textEdit8);
             this.groupControl1.Controls.Add(this.label9);
             this.groupControl1.Controls.Add(this.label4);
-            this.groupControl1.Controls.Add(this.textEdit4);
             this.groupControl1.Controls.Add(this.label5);
-            this.groupControl1.Controls.Add(this.txtCurrency);
             this.groupControl1.Controls.Add(this.label6);
             this.groupControl1.Controls.Add(this.txtDefaultProfitPrecentage);
             this.groupControl1.Controls.Add(this.label3);
             this.groupControl1.Controls.Add(this.label2);
-            this.groupControl1.Controls.Add(this.textEdit2);
             this.groupControl1.Controls.Add(this.label1);
             this.groupControl1.Controls.Add(this.txtBusinessName);
             this.groupControl1.Controls.Add(this.dteStartDate);
             this.groupControl1.Controls.Add(this.txtDateFormat);
             this.groupControl1.Controls.Add(this.textEdit10);
             this.groupControl1.Controls.Add(this.textEdit3);
+            this.groupControl1.Controls.Add(this.txtCurrency);
+            this.groupControl1.Controls.Add(this.textEdit2);
+            this.groupControl1.Controls.Add(this.textEdit8);
+            this.groupControl1.Controls.Add(this.textEdit13);
+            this.groupControl1.Controls.Add(this.textEdit12);
+            this.groupControl1.Controls.Add(this.textEdit4);
             this.groupControl1.Location = new System.Drawing.Point(12, 12);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(1419, 439);
@@ -134,15 +138,6 @@
             this.BtnSave.TabIndex = 30;
             this.BtnSave.Text = "Save";
             // 
-            // textEdit13
-            // 
-            this.textEdit13.Location = new System.Drawing.Point(1154, 216);
-            this.textEdit13.Name = "textEdit13";
-            this.textEdit13.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit13.Properties.Appearance.Options.UseFont = true;
-            this.textEdit13.Size = new System.Drawing.Size(242, 24);
-            this.textEdit13.TabIndex = 29;
-            // 
             // simpleButton1
             // 
             this.simpleButton1.ImageOptions.Image = global::EzPOS.Properties.Resources.upload_32px___Copy;
@@ -152,15 +147,6 @@
             this.simpleButton1.Size = new System.Drawing.Size(102, 34);
             this.simpleButton1.TabIndex = 28;
             this.simpleButton1.Text = "Upload";
-            // 
-            // textEdit12
-            // 
-            this.textEdit12.Location = new System.Drawing.Point(1154, 269);
-            this.textEdit12.Name = "textEdit12";
-            this.textEdit12.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit12.Properties.Appearance.Options.UseFont = true;
-            this.textEdit12.Size = new System.Drawing.Size(242, 24);
-            this.textEdit12.TabIndex = 26;
             // 
             // pictureBox1
             // 
@@ -251,15 +237,6 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "Currency Symbol Placement :";
             // 
-            // textEdit8
-            // 
-            this.textEdit8.Location = new System.Drawing.Point(673, 216);
-            this.textEdit8.Name = "textEdit8";
-            this.textEdit8.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit8.Properties.Appearance.Options.UseFont = true;
-            this.textEdit8.Size = new System.Drawing.Size(242, 24);
-            this.textEdit8.TabIndex = 14;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -280,15 +257,6 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "Stock Accounting Method :";
             // 
-            // textEdit4
-            // 
-            this.textEdit4.Location = new System.Drawing.Point(673, 269);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit4.Properties.Appearance.Options.UseFont = true;
-            this.textEdit4.Size = new System.Drawing.Size(242, 24);
-            this.textEdit4.TabIndex = 10;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -298,15 +266,6 @@
             this.label5.Size = new System.Drawing.Size(88, 18);
             this.label5.TabIndex = 9;
             this.label5.Text = "Time Zone :";
-            // 
-            // txtCurrency
-            // 
-            this.txtCurrency.Location = new System.Drawing.Point(673, 115);
-            this.txtCurrency.Name = "txtCurrency";
-            this.txtCurrency.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCurrency.Properties.Appearance.Options.UseFont = true;
-            this.txtCurrency.Size = new System.Drawing.Size(242, 24);
-            this.txtCurrency.TabIndex = 8;
             // 
             // label6
             // 
@@ -346,15 +305,6 @@
             this.label2.Size = new System.Drawing.Size(85, 18);
             this.label2.TabIndex = 3;
             this.label2.Text = "Start Date :";
-            // 
-            // textEdit2
-            // 
-            this.textEdit2.Location = new System.Drawing.Point(673, 166);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Size = new System.Drawing.Size(242, 24);
-            this.textEdit2.TabIndex = 2;
             // 
             // label1
             // 
@@ -442,8 +392,121 @@
             this.textEdit3.Properties.Appearance.Options.UseFont = true;
             this.textEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textEdit3.Properties.Items.AddRange(new object[] {
+            "Before Amount",
+            "After Amount"});
             this.textEdit3.Size = new System.Drawing.Size(242, 24);
             this.textEdit3.TabIndex = 4;
+            // 
+            // txtCurrency
+            // 
+            this.txtCurrency.Location = new System.Drawing.Point(673, 115);
+            this.txtCurrency.Name = "txtCurrency";
+            this.txtCurrency.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCurrency.Properties.Appearance.Options.UseFont = true;
+            this.txtCurrency.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtCurrency.Properties.NullText = "";
+            this.txtCurrency.Properties.PopupView = this.gridView2;
+            this.txtCurrency.Size = new System.Drawing.Size(242, 24);
+            this.txtCurrency.TabIndex = 8;
+            // 
+            // gridView2
+            // 
+            this.gridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView2.OptionsView.ShowGroupPanel = false;
+            // 
+            // textEdit2
+            // 
+            this.textEdit2.Location = new System.Drawing.Point(673, 166);
+            this.textEdit2.Name = "textEdit2";
+            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEdit2.Properties.Appearance.Options.UseFont = true;
+            this.textEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textEdit2.Properties.NullText = "";
+            this.textEdit2.Properties.PopupView = this.gridView3;
+            this.textEdit2.Size = new System.Drawing.Size(242, 24);
+            this.textEdit2.TabIndex = 2;
+            // 
+            // gridView3
+            // 
+            this.gridView3.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView3.Name = "gridView3";
+            this.gridView3.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView3.OptionsView.ShowGroupPanel = false;
+            // 
+            // textEdit8
+            // 
+            this.textEdit8.Location = new System.Drawing.Point(673, 216);
+            this.textEdit8.Name = "textEdit8";
+            this.textEdit8.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEdit8.Properties.Appearance.Options.UseFont = true;
+            this.textEdit8.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textEdit8.Properties.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.textEdit8.Size = new System.Drawing.Size(242, 24);
+            this.textEdit8.TabIndex = 14;
+            // 
+            // textEdit13
+            // 
+            this.textEdit13.Location = new System.Drawing.Point(1154, 216);
+            this.textEdit13.Name = "textEdit13";
+            this.textEdit13.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEdit13.Properties.Appearance.Options.UseFont = true;
+            this.textEdit13.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textEdit13.Properties.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.textEdit13.Size = new System.Drawing.Size(242, 24);
+            this.textEdit13.TabIndex = 29;
+            // 
+            // textEdit12
+            // 
+            this.textEdit12.Location = new System.Drawing.Point(1154, 269);
+            this.textEdit12.Name = "textEdit12";
+            this.textEdit12.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEdit12.Properties.Appearance.Options.UseFont = true;
+            this.textEdit12.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textEdit12.Properties.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4"});
+            this.textEdit12.Size = new System.Drawing.Size(242, 24);
+            this.textEdit12.TabIndex = 26;
+            // 
+            // textEdit4
+            // 
+            this.textEdit4.Location = new System.Drawing.Point(673, 269);
+            this.textEdit4.Name = "textEdit4";
+            this.textEdit4.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEdit4.Properties.Appearance.Options.UseFont = true;
+            this.textEdit4.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.textEdit4.Properties.Items.AddRange(new object[] {
+            "FIFO - First in First out",
+            "LIFO - Last in First out"});
+            this.textEdit4.Size = new System.Drawing.Size(242, 24);
+            this.textEdit4.TabIndex = 10;
             // 
             // FrmBusinessSettings
             // 
@@ -458,15 +521,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTransactionEditDays.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCurrency.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDefaultProfitPrecentage.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBusinessName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteStartDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dteStartDate.Properties)).EndInit();
@@ -475,6 +532,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCurrency.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -483,7 +548,6 @@
 
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private System.Windows.Forms.Label label2;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.TextEdit txtBusinessName;
         private System.Windows.Forms.Label label13;
@@ -493,19 +557,14 @@
         private System.Windows.Forms.Label label7;
         private DevExpress.XtraEditors.TextEdit txtTransactionEditDays;
         private System.Windows.Forms.Label label8;
-        private DevExpress.XtraEditors.TextEdit textEdit8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label4;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
         private System.Windows.Forms.Label label5;
-        private DevExpress.XtraEditors.TextEdit txtCurrency;
         private System.Windows.Forms.Label label6;
         private DevExpress.XtraEditors.TextEdit txtDefaultProfitPrecentage;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private DevExpress.XtraEditors.TextEdit textEdit12;
-        private DevExpress.XtraEditors.TextEdit textEdit13;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.DateEdit dteStartDate;
         private DevExpress.XtraEditors.GridLookUpEdit txtDateFormat;
@@ -514,5 +573,13 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.ComboBoxEdit textEdit3;
         private DevExpress.XtraEditors.SimpleButton BtnSave;
+        private DevExpress.XtraEditors.GridLookUpEdit txtCurrency;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraEditors.GridLookUpEdit textEdit2;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
+        private DevExpress.XtraEditors.ComboBoxEdit textEdit8;
+        private DevExpress.XtraEditors.ComboBoxEdit textEdit13;
+        private DevExpress.XtraEditors.ComboBoxEdit textEdit12;
+        private DevExpress.XtraEditors.ComboBoxEdit textEdit4;
     }
 }
