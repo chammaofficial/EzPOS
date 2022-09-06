@@ -157,5 +157,23 @@ namespace EzPOS.Helpers
                 }
             }
         }
+
+        public static bool Validate(this Models.Branch b)
+        {
+            using (var context = new POSContext())
+            {
+                var errors = context.Entry(b).GetValidationResult().ValidationErrors;
+                if (errors.Any())
+                {
+                    Alerts.Error(errors.First().ErrorMessage);
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+        }
+
     }
 }

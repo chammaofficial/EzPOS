@@ -246,6 +246,18 @@
     <Compile Include="Migrations\202209061639314_Add Active status to Branch.designer.cs">
       <DependentUpon>202209061639314_Add Active status to Branch.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202209061653285_Add Business Settings to Branch Model.cs" />
+    <Compile Include="Migrations\202209061653285_Add Business Settings to Branch Model.designer.cs">
+      <DependentUpon>202209061653285_Add Business Settings to Branch Model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202209061658132_Add Business Settings to Branch Model Required.cs" />
+    <Compile Include="Migrations\202209061658132_Add Business Settings to Branch Model Required.designer.cs">
+      <DependentUpon>202209061658132_Add Business Settings to Branch Model Required.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202209061747213_Add Name to Business Settings.cs" />
+    <Compile Include="Migrations\202209061747213_Add Name to Business Settings.designer.cs">
+      <DependentUpon>202209061747213_Add Name to Business Settings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\ProductSerial.cs" />
     <Compile Include="Models\BarcodeConfiguration.cs" />
@@ -465,6 +477,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202209061639314_Add Active status to Branch.resx">
       <DependentUpon>202209061639314_Add Active status to Branch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209061653285_Add Business Settings to Branch Model.resx">
+      <DependentUpon>202209061653285_Add Business Settings to Branch Model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209061658132_Add Business Settings to Branch Model Required.resx">
+      <DependentUpon>202209061658132_Add Business Settings to Branch Model Required.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209061747213_Add Name to Business Settings.resx">
+      <DependentUpon>202209061747213_Add Name to Business Settings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

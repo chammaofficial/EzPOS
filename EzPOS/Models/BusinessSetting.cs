@@ -10,6 +10,7 @@ namespace EzPOS.Models
     public class BusinessSetting
     {
         public int Id { get; set; }
+        public string Name { get; set; }
         public DateTime? StartDate { get; set; }
         public int TransactionEditDays { get; set; }
         public int DefaultProfitPrecentage { get; set; }

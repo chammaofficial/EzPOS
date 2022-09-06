@@ -40,23 +40,23 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
+            this.txtTransactionEditDays = new DevExpress.XtraEditors.TextEdit();
             this.label8 = new System.Windows.Forms.Label();
             this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
             this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
             this.label5 = new System.Windows.Forms.Label();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCurrency = new DevExpress.XtraEditors.TextEdit();
             this.label6 = new System.Windows.Forms.Label();
-            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
+            this.txtDefaultProfitPrecentage = new DevExpress.XtraEditors.TextEdit();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit9 = new DevExpress.XtraEditors.DateEdit();
-            this.textEdit11 = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.txtBusinessName = new DevExpress.XtraEditors.TextEdit();
+            this.dteStartDate = new DevExpress.XtraEditors.DateEdit();
+            this.txtDateFormat = new DevExpress.XtraEditors.GridLookUpEdit();
             this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.textEdit10 = new DevExpress.XtraEditors.GridLookUpEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -66,16 +66,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTransactionEditDays.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCurrency.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDefaultProfitPrecentage.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBusinessName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteStartDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteStartDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDateFormat.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -98,23 +98,23 @@
             this.groupControl1.Controls.Add(this.label11);
             this.groupControl1.Controls.Add(this.label10);
             this.groupControl1.Controls.Add(this.label7);
-            this.groupControl1.Controls.Add(this.textEdit7);
+            this.groupControl1.Controls.Add(this.txtTransactionEditDays);
             this.groupControl1.Controls.Add(this.label8);
             this.groupControl1.Controls.Add(this.textEdit8);
             this.groupControl1.Controls.Add(this.label9);
             this.groupControl1.Controls.Add(this.label4);
             this.groupControl1.Controls.Add(this.textEdit4);
             this.groupControl1.Controls.Add(this.label5);
-            this.groupControl1.Controls.Add(this.textEdit5);
+            this.groupControl1.Controls.Add(this.txtCurrency);
             this.groupControl1.Controls.Add(this.label6);
-            this.groupControl1.Controls.Add(this.textEdit6);
+            this.groupControl1.Controls.Add(this.txtDefaultProfitPrecentage);
             this.groupControl1.Controls.Add(this.label3);
             this.groupControl1.Controls.Add(this.label2);
             this.groupControl1.Controls.Add(this.textEdit2);
             this.groupControl1.Controls.Add(this.label1);
-            this.groupControl1.Controls.Add(this.textEdit1);
-            this.groupControl1.Controls.Add(this.textEdit9);
-            this.groupControl1.Controls.Add(this.textEdit11);
+            this.groupControl1.Controls.Add(this.txtBusinessName);
+            this.groupControl1.Controls.Add(this.dteStartDate);
+            this.groupControl1.Controls.Add(this.txtDateFormat);
             this.groupControl1.Controls.Add(this.textEdit10);
             this.groupControl1.Controls.Add(this.textEdit3);
             this.groupControl1.Location = new System.Drawing.Point(12, 12);
@@ -232,14 +232,14 @@
             this.label7.TabIndex = 17;
             this.label7.Text = "Date Format :";
             // 
-            // textEdit7
+            // txtTransactionEditDays
             // 
-            this.textEdit7.Location = new System.Drawing.Point(1154, 64);
-            this.textEdit7.Name = "textEdit7";
-            this.textEdit7.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit7.Properties.Appearance.Options.UseFont = true;
-            this.textEdit7.Size = new System.Drawing.Size(242, 24);
-            this.textEdit7.TabIndex = 16;
+            this.txtTransactionEditDays.Location = new System.Drawing.Point(1154, 64);
+            this.txtTransactionEditDays.Name = "txtTransactionEditDays";
+            this.txtTransactionEditDays.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTransactionEditDays.Properties.Appearance.Options.UseFont = true;
+            this.txtTransactionEditDays.Size = new System.Drawing.Size(242, 24);
+            this.txtTransactionEditDays.TabIndex = 16;
             // 
             // label8
             // 
@@ -299,14 +299,14 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Time Zone :";
             // 
-            // textEdit5
+            // txtCurrency
             // 
-            this.textEdit5.Location = new System.Drawing.Point(673, 115);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit5.Properties.Appearance.Options.UseFont = true;
-            this.textEdit5.Size = new System.Drawing.Size(242, 24);
-            this.textEdit5.TabIndex = 8;
+            this.txtCurrency.Location = new System.Drawing.Point(673, 115);
+            this.txtCurrency.Name = "txtCurrency";
+            this.txtCurrency.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCurrency.Properties.Appearance.Options.UseFont = true;
+            this.txtCurrency.Size = new System.Drawing.Size(242, 24);
+            this.txtCurrency.TabIndex = 8;
             // 
             // label6
             // 
@@ -318,14 +318,14 @@
             this.label6.TabIndex = 7;
             this.label6.Text = "Default Profit Precentage :";
             // 
-            // textEdit6
+            // txtDefaultProfitPrecentage
             // 
-            this.textEdit6.Location = new System.Drawing.Point(215, 115);
-            this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit6.Properties.Appearance.Options.UseFont = true;
-            this.textEdit6.Size = new System.Drawing.Size(242, 24);
-            this.textEdit6.TabIndex = 6;
+            this.txtDefaultProfitPrecentage.Location = new System.Drawing.Point(215, 115);
+            this.txtDefaultProfitPrecentage.Name = "txtDefaultProfitPrecentage";
+            this.txtDefaultProfitPrecentage.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDefaultProfitPrecentage.Properties.Appearance.Options.UseFont = true;
+            this.txtDefaultProfitPrecentage.Size = new System.Drawing.Size(242, 24);
+            this.txtDefaultProfitPrecentage.TabIndex = 6;
             // 
             // label3
             // 
@@ -366,48 +366,46 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Business Name :";
             // 
-            // textEdit1
+            // txtBusinessName
             // 
-            this.textEdit1.Location = new System.Drawing.Point(215, 64);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Size = new System.Drawing.Size(242, 24);
-            this.textEdit1.TabIndex = 0;
+            this.txtBusinessName.Location = new System.Drawing.Point(215, 64);
+            this.txtBusinessName.Name = "txtBusinessName";
+            this.txtBusinessName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBusinessName.Properties.Appearance.Options.UseFont = true;
+            this.txtBusinessName.Size = new System.Drawing.Size(242, 24);
+            this.txtBusinessName.TabIndex = 0;
             // 
-            // textEdit9
+            // dteStartDate
             // 
-            this.textEdit9.EditValue = null;
-            this.textEdit9.Location = new System.Drawing.Point(673, 64);
-            this.textEdit9.Name = "textEdit9";
-            this.textEdit9.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit9.Properties.Appearance.Options.UseFont = true;
-            this.textEdit9.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dteStartDate.EditValue = null;
+            this.dteStartDate.Location = new System.Drawing.Point(673, 64);
+            this.dteStartDate.Name = "dteStartDate";
+            this.dteStartDate.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dteStartDate.Properties.Appearance.Options.UseFont = true;
+            this.dteStartDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textEdit9.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dteStartDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textEdit9.Properties.DisplayFormat.FormatString = "";
-            this.textEdit9.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.textEdit9.Properties.EditFormat.FormatString = "";
-            this.textEdit9.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.textEdit9.Properties.Mask.EditMask = "";
-            this.textEdit9.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.textEdit9.Properties.MaskSettings.Set("mask", "");
-            this.textEdit9.Size = new System.Drawing.Size(242, 24);
-            this.textEdit9.TabIndex = 12;
+            this.dteStartDate.Properties.DisplayFormat.FormatString = "";
+            this.dteStartDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dteStartDate.Properties.EditFormat.FormatString = "";
+            this.dteStartDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dteStartDate.Properties.MaskSettings.Set("mask", "");
+            this.dteStartDate.Size = new System.Drawing.Size(242, 24);
+            this.dteStartDate.TabIndex = 12;
             // 
-            // textEdit11
+            // txtDateFormat
             // 
-            this.textEdit11.Location = new System.Drawing.Point(1154, 115);
-            this.textEdit11.Name = "textEdit11";
-            this.textEdit11.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit11.Properties.Appearance.Options.UseFont = true;
-            this.textEdit11.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.txtDateFormat.Location = new System.Drawing.Point(1154, 115);
+            this.txtDateFormat.Name = "txtDateFormat";
+            this.txtDateFormat.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDateFormat.Properties.Appearance.Options.UseFont = true;
+            this.txtDateFormat.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.textEdit11.Properties.NullText = "";
-            this.textEdit11.Properties.PopupView = this.gridLookUpEdit1View;
-            this.textEdit11.Size = new System.Drawing.Size(242, 24);
-            this.textEdit11.TabIndex = 24;
+            this.txtDateFormat.Properties.NullText = "";
+            this.txtDateFormat.Properties.PopupView = this.gridLookUpEdit1View;
+            this.txtDateFormat.Size = new System.Drawing.Size(242, 24);
+            this.txtDateFormat.TabIndex = 24;
             // 
             // gridLookUpEdit1View
             // 
@@ -456,22 +454,23 @@
             this.IconOptions.Image = global::EzPOS.Properties.Resources.Business_settings_32;
             this.Name = "FrmBusinessSettings";
             this.Text = "Business Settings";
+            this.Load += new System.EventHandler(this.FrmBusinessSettings_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTransactionEditDays.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCurrency.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDefaultProfitPrecentage.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBusinessName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteStartDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dteStartDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDateFormat.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -486,30 +485,30 @@
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.TextEdit textEdit2;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtBusinessName;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label7;
-        private DevExpress.XtraEditors.TextEdit textEdit7;
+        private DevExpress.XtraEditors.TextEdit txtTransactionEditDays;
         private System.Windows.Forms.Label label8;
         private DevExpress.XtraEditors.TextEdit textEdit8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label4;
         private DevExpress.XtraEditors.TextEdit textEdit4;
         private System.Windows.Forms.Label label5;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
+        private DevExpress.XtraEditors.TextEdit txtCurrency;
         private System.Windows.Forms.Label label6;
-        private DevExpress.XtraEditors.TextEdit textEdit6;
+        private DevExpress.XtraEditors.TextEdit txtDefaultProfitPrecentage;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox pictureBox1;
         private DevExpress.XtraEditors.TextEdit textEdit12;
         private DevExpress.XtraEditors.TextEdit textEdit13;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.DateEdit textEdit9;
-        private DevExpress.XtraEditors.GridLookUpEdit textEdit11;
+        private DevExpress.XtraEditors.DateEdit dteStartDate;
+        private DevExpress.XtraEditors.GridLookUpEdit txtDateFormat;
         private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
         private DevExpress.XtraEditors.GridLookUpEdit textEdit10;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;

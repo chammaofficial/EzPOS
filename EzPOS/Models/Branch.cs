@@ -31,5 +31,8 @@ namespace EzPOS.Models
         public bool IsActive { get; set; }
         public virtual ICollection<User> Users { get; set; }
 
+        public int BusinessSettingId { get; set; }
+        public BusinessSetting BusinessSetting { get; set; }
+
     }
 }

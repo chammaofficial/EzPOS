@@ -59,6 +59,9 @@
             this.clmnContactNo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clmnEmail = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clmnIsActive = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clmnId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.clmnEdit = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.lnkEdit = new DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtContactNo.Properties)).BeginInit();
@@ -72,6 +75,7 @@
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GCBranches)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GVBranches)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lnkEdit)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -301,6 +305,8 @@
             this.GCBranches.Location = new System.Drawing.Point(5, 60);
             this.GCBranches.MainView = this.GVBranches;
             this.GCBranches.Name = "GCBranches";
+            this.GCBranches.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.lnkEdit});
             this.GCBranches.Size = new System.Drawing.Size(830, 200);
             this.GCBranches.TabIndex = 0;
             this.GCBranches.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -309,6 +315,7 @@
             // GVBranches
             // 
             this.GVBranches.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.clmnId,
             this.clmnCode,
             this.clmnName,
             this.clmnAddress01,
@@ -316,7 +323,8 @@
             this.clmnCity,
             this.clmnContactNo,
             this.clmnEmail,
-            this.clmnIsActive});
+            this.clmnIsActive,
+            this.clmnEdit});
             this.GVBranches.GridControl = this.GCBranches;
             this.GVBranches.Name = "GVBranches";
             // 
@@ -326,6 +334,7 @@
             this.clmnCode.FieldName = "Code";
             this.clmnCode.MinWidth = 25;
             this.clmnCode.Name = "clmnCode";
+            this.clmnCode.OptionsColumn.AllowEdit = false;
             this.clmnCode.Visible = true;
             this.clmnCode.VisibleIndex = 0;
             this.clmnCode.Width = 94;
@@ -336,6 +345,7 @@
             this.clmnName.FieldName = "Name";
             this.clmnName.MinWidth = 25;
             this.clmnName.Name = "clmnName";
+            this.clmnName.OptionsColumn.AllowEdit = false;
             this.clmnName.Visible = true;
             this.clmnName.VisibleIndex = 1;
             this.clmnName.Width = 94;
@@ -346,6 +356,7 @@
             this.clmnAddress01.FieldName = "Address1";
             this.clmnAddress01.MinWidth = 25;
             this.clmnAddress01.Name = "clmnAddress01";
+            this.clmnAddress01.OptionsColumn.AllowEdit = false;
             this.clmnAddress01.Visible = true;
             this.clmnAddress01.VisibleIndex = 2;
             this.clmnAddress01.Width = 94;
@@ -356,6 +367,7 @@
             this.clmnAddress02.FieldName = "Address2";
             this.clmnAddress02.MinWidth = 25;
             this.clmnAddress02.Name = "clmnAddress02";
+            this.clmnAddress02.OptionsColumn.AllowEdit = false;
             this.clmnAddress02.Visible = true;
             this.clmnAddress02.VisibleIndex = 3;
             this.clmnAddress02.Width = 94;
@@ -366,6 +378,7 @@
             this.clmnCity.FieldName = "City";
             this.clmnCity.MinWidth = 25;
             this.clmnCity.Name = "clmnCity";
+            this.clmnCity.OptionsColumn.AllowEdit = false;
             this.clmnCity.Visible = true;
             this.clmnCity.VisibleIndex = 4;
             this.clmnCity.Width = 94;
@@ -376,6 +389,7 @@
             this.clmnContactNo.FieldName = "ContactNumber";
             this.clmnContactNo.MinWidth = 25;
             this.clmnContactNo.Name = "clmnContactNo";
+            this.clmnContactNo.OptionsColumn.AllowEdit = false;
             this.clmnContactNo.Visible = true;
             this.clmnContactNo.VisibleIndex = 5;
             this.clmnContactNo.Width = 94;
@@ -386,6 +400,7 @@
             this.clmnEmail.FieldName = "EmailAddress";
             this.clmnEmail.MinWidth = 25;
             this.clmnEmail.Name = "clmnEmail";
+            this.clmnEmail.OptionsColumn.AllowEdit = false;
             this.clmnEmail.Visible = true;
             this.clmnEmail.VisibleIndex = 6;
             this.clmnEmail.Width = 94;
@@ -396,9 +411,38 @@
             this.clmnIsActive.FieldName = "IsActive";
             this.clmnIsActive.MinWidth = 25;
             this.clmnIsActive.Name = "clmnIsActive";
+            this.clmnIsActive.OptionsColumn.AllowEdit = false;
             this.clmnIsActive.Visible = true;
             this.clmnIsActive.VisibleIndex = 7;
             this.clmnIsActive.Width = 94;
+            // 
+            // clmnId
+            // 
+            this.clmnId.Caption = "gridColumn1";
+            this.clmnId.FieldName = "Id";
+            this.clmnId.MinWidth = 25;
+            this.clmnId.Name = "clmnId";
+            this.clmnId.OptionsColumn.AllowEdit = false;
+            this.clmnId.Width = 94;
+            // 
+            // clmnEdit
+            // 
+            this.clmnEdit.Caption = "Edit";
+            this.clmnEdit.ColumnEdit = this.lnkEdit;
+            this.clmnEdit.FieldName = "Edit";
+            this.clmnEdit.MinWidth = 25;
+            this.clmnEdit.Name = "clmnEdit";
+            this.clmnEdit.Visible = true;
+            this.clmnEdit.VisibleIndex = 8;
+            this.clmnEdit.Width = 94;
+            // 
+            // lnkEdit
+            // 
+            this.lnkEdit.AutoHeight = false;
+            this.lnkEdit.Caption = "Edit";
+            this.lnkEdit.Name = "lnkEdit";
+            this.lnkEdit.NullText = "Edit";
+            this.lnkEdit.Click += new System.EventHandler(this.lnkEdit_Click);
             // 
             // FrmBranches
             // 
@@ -425,6 +469,7 @@
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GCBranches)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GVBranches)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lnkEdit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -461,5 +506,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn clmnContactNo;
         private DevExpress.XtraGrid.Columns.GridColumn clmnEmail;
         private DevExpress.XtraGrid.Columns.GridColumn clmnIsActive;
+        private DevExpress.XtraGrid.Columns.GridColumn clmnId;
+        private DevExpress.XtraGrid.Columns.GridColumn clmnEdit;
+        private DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit lnkEdit;
     }
 }

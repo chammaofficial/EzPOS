@@ -22,6 +22,7 @@ namespace EzPOS.UI.Settings
         {
             InitializeComponent();
             service = new BranchService(new POSContext());
+            TempBranch = new Branch();
         }
 
         private void FrmBranches_Load(object sender, EventArgs e)
@@ -58,6 +59,42 @@ namespace EzPOS.UI.Settings
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
+            TempBranch.Code = txtCode.Text;
+            TempBranch.Name = txtName.Text;
+            TempBranch.Address1 = txtAddress1.Text;
+            TempBranch.Address2 = txtAddress2.Text;
+            TempBranch.City = txtCity.Text;
+            TempBranch.ContactNumber = txtContactNo.Text;
+            TempBranch.EmailAddress = txtEmail.Text;
+            TempBranch.IsActive = chkActive.Checked;
+            if (TempBranch.Id == 0)
+            {
+                TempBranch.BusinessSetting = new BusinessSetting();
+            }
+
+            if (TempBranch.Validate() == true)
+            {
+                if (Alerts.Confirm("Are sure want to save this Branch ?") == DialogResult.Yes)
+                {
+                    service.SaveBranch(TempBranch);
+                    Clear();
+                }
+            }
+            LoadData();
+
+        }
+
+        private void lnkEdit_Click(object sender, EventArgs e)
+        {
+            TempBranch = service.GetBranchById(int.Parse(GVBranches.GetRowCellValue(GVBranches.FocusedRowHandle, clmnId).ToString()));
+            txtCode.Text = TempBranch.Code;
+            txtName.Text = TempBranch.Name;
+            txtAddress1.Text = TempBranch.Address1;
+            txtAddress2.Text = TempBranch.Address2;
+            txtCity.Text = TempBranch.City;
+            txtContactNo.Text = TempBranch.ContactNumber;
+            txtEmail.Text = TempBranch.EmailAddress;
+            chkActive.Checked = TempBranch.IsActive;
 
         }
     }
