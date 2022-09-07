@@ -1,15 +1,16 @@
 ﻿using System.Linq;
+using System.Runtime.Remoting.Contexts;
+using EzPOS.Models;
 
 namespace EzPOS.Helpers
 {
     public static class EntityValidators
     {
-
-        public static bool Validate(this Models.Employee emp)
+        public static bool Validate(this Employee entity)
         {
             using (var context = new POSContext())
             {
-                var errors = context.Entry(emp).GetValidationResult().ValidationErrors;
+                var errors = context.Entry(entity).GetValidationResult().ValidationErrors;
                 if (errors.Any())
                 {
                     Alerts.Error(errors.First().ErrorMessage);
@@ -22,11 +23,11 @@ namespace EzPOS.Helpers
             }
         }
 
-        public static bool Validate(this Models.Supplier sup)
+        public static bool Validate(this Supplier entity)
         {
             using (var context = new POSContext())
             {
-                var errors = context.Entry(sup).GetValidationResult().ValidationErrors;
+                var errors = context.Entry(entity).GetValidationResult().ValidationErrors;
                 if (errors.Any())
                 {
                     Alerts.Error(errors.First().ErrorMessage);
@@ -39,11 +40,11 @@ namespace EzPOS.Helpers
             }
         }
 
-        public static bool Validate(this Models.Customer cus)
+        public static bool Validate(this Customer entity)
         {
             using (var context = new POSContext())
             {
-                var errors = context.Entry(cus).GetValidationResult().ValidationErrors;
+                var errors = context.Entry(entity).GetValidationResult().ValidationErrors;
                 if (errors.Any())
                 {
                     Alerts.Error(errors.First().ErrorMessage);
@@ -56,11 +57,11 @@ namespace EzPOS.Helpers
             }
         }
 
-        public static bool Validate(this Models.Brand brand)
+        public static bool Validate(this Brand entity)
         {
             using (var context = new POSContext())
             {
-                var errors = context.Entry(brand).GetValidationResult().ValidationErrors;
+                var errors = context.Entry(entity).GetValidationResult().ValidationErrors;
                 if (errors.Any())
                 {
                     Alerts.Error(errors.First().ErrorMessage);
@@ -73,11 +74,11 @@ namespace EzPOS.Helpers
             }
         }
 
-        public static bool Validate(this Models.Category category)
+        public static bool Validate(this Category entity)
         {
             using (var context = new POSContext())
             {
-                var errors = context.Entry(category).GetValidationResult().ValidationErrors;
+                var errors = context.Entry(entity).GetValidationResult().ValidationErrors;
                 if (errors.Any())
                 {
                     Alerts.Error(errors.First().ErrorMessage);
@@ -90,11 +91,11 @@ namespace EzPOS.Helpers
             }
         }
 
-        public static bool Validate(this Models.ProductStatusCode code)
+        public static bool Validate(this Branch entity)
         {
             using (var context = new POSContext())
             {
-                var errors = context.Entry(code).GetValidationResult().ValidationErrors;
+                var errors = context.Entry(entity).GetValidationResult().ValidationErrors;
                 if (errors.Any())
                 {
                     Alerts.Error(errors.First().ErrorMessage);
@@ -107,11 +108,11 @@ namespace EzPOS.Helpers
             }
         }
 
-        public static bool Validate(this Models.Product p)
+        public static bool Validate(this BusinessSetting entity)
         {
             using (var context = new POSContext())
             {
-                var errors = context.Entry(p).GetValidationResult().ValidationErrors;
+                var errors = context.Entry(entity).GetValidationResult().ValidationErrors;
                 if (errors.Any())
                 {
                     Alerts.Error(errors.First().ErrorMessage);
@@ -124,11 +125,11 @@ namespace EzPOS.Helpers
             }
         }
 
-        public static bool Validate(this Models.PurchaseOrder p)
+        public static bool Validate(this PurchaseOrder entity)
         {
             using (var context = new POSContext())
             {
-                var errors = context.Entry(p).GetValidationResult().ValidationErrors;
+                var errors = context.Entry(entity).GetValidationResult().ValidationErrors;
                 if (errors.Any())
                 {
                     Alerts.Error(errors.First().ErrorMessage);
@@ -141,11 +142,11 @@ namespace EzPOS.Helpers
             }
         }
 
-        public static bool Validate(this Models.PurchaseOrderDetail p)
+        public static bool Validate(this PurchaseOrderDetail entity)
         {
             using (var context = new POSContext())
             {
-                var errors = context.Entry(p).GetValidationResult().ValidationErrors;
+                var errors = context.Entry(entity).GetValidationResult().ValidationErrors;
                 if (errors.Any())
                 {
                     Alerts.Error(errors.First().ErrorMessage);
@@ -158,11 +159,28 @@ namespace EzPOS.Helpers
             }
         }
 
-        public static bool Validate(this Models.Branch b)
+        public static bool Validate(this ProductStatusCode entity)
         {
             using (var context = new POSContext())
             {
-                var errors = context.Entry(b).GetValidationResult().ValidationErrors;
+                var errors = context.Entry(entity).GetValidationResult().ValidationErrors;
+                if (errors.Any())
+                {
+                    Alerts.Error(errors.First().ErrorMessage);
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+        }
+
+        public static bool Validate(this Product entity)
+        {
+            using (var context = new POSContext())
+            {
+                var errors = context.Entry(entity).GetValidationResult().ValidationErrors;
                 if (errors.Any())
                 {
                     Alerts.Error(errors.First().ErrorMessage);
