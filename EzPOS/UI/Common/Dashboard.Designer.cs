@@ -61,6 +61,9 @@
             this.menuHome = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.menuUserManagement = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.menuContact = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup29 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup30 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup31 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.menuProduct = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.menuPurchases = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -104,9 +107,13 @@
             this.menuContacts = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup21 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup20 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup29 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup30 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup31 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup32 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup33 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup34 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup35 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup36 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barBtnPrintLabels = new DevExpress.XtraBars.BarButtonItem();
+            this.barBtnUnits = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -145,10 +152,12 @@
             this.barButtonItem15,
             this.barButtonItem16,
             this.barButtonItem14,
-            this.barBtnBranches});
+            this.barBtnBranches,
+            this.barBtnPrintLabels,
+            this.barBtnUnits});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(10, 12, 10, 12);
-            this.ribbonControl1.MaxItemId = 36;
+            this.ribbonControl1.MaxItemId = 38;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.OptionsMenuMinWidth = 1100;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -429,8 +438,35 @@
             this.menuContact.Name = "menuContact";
             this.menuContact.Text = "Contacts";
             // 
+            // ribbonPageGroup29
+            // 
+            this.ribbonPageGroup29.AllowTextClipping = false;
+            this.ribbonPageGroup29.ItemLinks.Add(this.barBtnEmployee);
+            this.ribbonPageGroup29.Name = "ribbonPageGroup29";
+            this.ribbonPageGroup29.Text = "Employees";
+            // 
+            // ribbonPageGroup30
+            // 
+            this.ribbonPageGroup30.AllowTextClipping = false;
+            this.ribbonPageGroup30.ItemLinks.Add(this.barBtnCustomer);
+            this.ribbonPageGroup30.Name = "ribbonPageGroup30";
+            this.ribbonPageGroup30.Text = "Customers";
+            // 
+            // ribbonPageGroup31
+            // 
+            this.ribbonPageGroup31.AllowTextClipping = false;
+            this.ribbonPageGroup31.ItemLinks.Add(this.barBtnSupplier);
+            this.ribbonPageGroup31.Name = "ribbonPageGroup31";
+            this.ribbonPageGroup31.Text = "Suppliers";
+            // 
             // menuProduct
             // 
+            this.menuProduct.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup32,
+            this.ribbonPageGroup33,
+            this.ribbonPageGroup34,
+            this.ribbonPageGroup35,
+            this.ribbonPageGroup36});
             this.menuProduct.ImageOptions.Image = global::EzPOS.Properties.Resources.product_32px;
             this.menuProduct.Name = "menuProduct";
             this.menuProduct.Text = "Products";
@@ -735,26 +771,54 @@
             this.ribbonPageGroup20.Name = "ribbonPageGroup20";
             this.ribbonPageGroup20.Text = "Product Settings";
             // 
-            // ribbonPageGroup29
+            // ribbonPageGroup32
             // 
-            this.ribbonPageGroup29.AllowTextClipping = false;
-            this.ribbonPageGroup29.ItemLinks.Add(this.barBtnEmployee);
-            this.ribbonPageGroup29.Name = "ribbonPageGroup29";
-            this.ribbonPageGroup29.Text = "Employees";
+            this.ribbonPageGroup32.ItemLinks.Add(this.barBtnProductMaster);
+            this.ribbonPageGroup32.Name = "ribbonPageGroup32";
+            this.ribbonPageGroup32.Text = "Products";
             // 
-            // ribbonPageGroup30
+            // ribbonPageGroup33
             // 
-            this.ribbonPageGroup30.AllowTextClipping = false;
-            this.ribbonPageGroup30.ItemLinks.Add(this.barBtnCustomer);
-            this.ribbonPageGroup30.Name = "ribbonPageGroup30";
-            this.ribbonPageGroup30.Text = "Customers";
+            this.ribbonPageGroup33.ItemLinks.Add(this.barBtnPrintLabels);
+            this.ribbonPageGroup33.Name = "ribbonPageGroup33";
+            this.ribbonPageGroup33.Text = "Print Labels";
             // 
-            // ribbonPageGroup31
+            // ribbonPageGroup34
             // 
-            this.ribbonPageGroup31.AllowTextClipping = false;
-            this.ribbonPageGroup31.ItemLinks.Add(this.barBtnSupplier);
-            this.ribbonPageGroup31.Name = "ribbonPageGroup31";
-            this.ribbonPageGroup31.Text = "Suppliers";
+            this.ribbonPageGroup34.ItemLinks.Add(this.barBtnUnits);
+            this.ribbonPageGroup34.Name = "ribbonPageGroup34";
+            this.ribbonPageGroup34.Text = "Units";
+            // 
+            // ribbonPageGroup35
+            // 
+            this.ribbonPageGroup35.ItemLinks.Add(this.barBtnCategories);
+            this.ribbonPageGroup35.Name = "ribbonPageGroup35";
+            this.ribbonPageGroup35.Text = "Categories";
+            // 
+            // ribbonPageGroup36
+            // 
+            this.ribbonPageGroup36.ItemLinks.Add(this.barBtnBrands);
+            this.ribbonPageGroup36.Name = "ribbonPageGroup36";
+            this.ribbonPageGroup36.Text = "Brands";
+            // 
+            // barBtnPrintLabels
+            // 
+            this.barBtnPrintLabels.Caption = "Print Labels";
+            this.barBtnPrintLabels.Id = 36;
+            this.barBtnPrintLabels.ImageOptions.Image = global::EzPOS.Properties.Resources.barcode_32px;
+            this.barBtnPrintLabels.Name = "barBtnPrintLabels";
+            this.barBtnPrintLabels.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            // 
+            // barBtnUnits
+            // 
+            this.barBtnUnits.Caption = "Units";
+            this.barBtnUnits.Id = 37;
+            this.barBtnUnits.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barBtnUnits.ImageOptions.Image")));
+            this.barBtnUnits.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtnUnits.ImageOptions.LargeImage")));
+            this.barBtnUnits.Name = "barBtnUnits";
+            this.barBtnUnits.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText) 
+            | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             // 
             // Dashboard
             // 
@@ -857,5 +921,12 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup29;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup30;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup31;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup32;
+        private DevExpress.XtraBars.BarButtonItem barBtnPrintLabels;
+        private DevExpress.XtraBars.BarButtonItem barBtnUnits;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup33;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup34;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup35;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup36;
     }
 }

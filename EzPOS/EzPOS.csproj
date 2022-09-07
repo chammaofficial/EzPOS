@@ -279,19 +279,19 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\ProductSerial.cs" />
     <Compile Include="Models\BarcodeConfiguration.cs" />
-    <Compile Include="Models\Branch.cs" />
-    <Compile Include="Models\Brand.cs" />
-    <Compile Include="Models\BusinessSetting.cs" />
-    <Compile Include="Models\Category.cs" />
-    <Compile Include="Models\Currency.cs" />
+    <Compile Include="Models\Settings\Branch.cs" />
+    <Compile Include="Models\Products\Brand.cs" />
+    <Compile Include="Models\Settings\BusinessSetting.cs" />
+    <Compile Include="Models\Products\Category.cs" />
+    <Compile Include="Models\Settings\Currency.cs" />
     <Compile Include="Models\PurchaseOrder.cs" />
-    <Compile Include="Models\Employee.cs" />
-    <Compile Include="Models\Product.cs" />
-    <Compile Include="Models\ProductStatusCode.cs" />
+    <Compile Include="Models\Contacts\Employee.cs" />
+    <Compile Include="Models\Products\Product.cs" />
+    <Compile Include="Models\Products\ProductStatusCode.cs" />
     <Compile Include="Models\PurchaseOrderDetail.cs" />
-    <Compile Include="Models\Supplier.cs" />
-    <Compile Include="Models\Customer.cs" />
-    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Contacts\Supplier.cs" />
+    <Compile Include="Models\Contacts\Customer.cs" />
+    <Compile Include="Models\Common\User.cs" />
     <Compile Include="POSContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -314,17 +314,17 @@
     <Compile Include="Reports\ReportFiles\Purchase\PurchaseOrderReport.Designer.cs">
       <DependentUpon>PurchaseOrderReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Services\BranchService.cs" />
-    <Compile Include="Services\BusinessSettingService.cs" />
-    <Compile Include="Services\ProductService.cs" />
-    <Compile Include="Services\ProductStatusCodeService.cs" />
-    <Compile Include="Services\BrandService.cs" />
-    <Compile Include="Services\CategoryService.cs" />
-    <Compile Include="Services\CustomerService.cs" />
+    <Compile Include="Services\Settings\BranchService.cs" />
+    <Compile Include="Services\Settings\BusinessSettingService.cs" />
+    <Compile Include="Services\Products\ProductService.cs" />
+    <Compile Include="Services\Products\ProductStatusCodeService.cs" />
+    <Compile Include="Services\Products\BrandService.cs" />
+    <Compile Include="Services\Products\CategoryService.cs" />
+    <Compile Include="Services\Contacts\CustomerService.cs" />
     <Compile Include="Services\PurchaseOrderService.cs" />
-    <Compile Include="Services\SupplierService.cs" />
-    <Compile Include="Services\EmployeeService.cs" />
-    <Compile Include="Services\LoginService.cs" />
+    <Compile Include="Services\Contacts\SupplierService.cs" />
+    <Compile Include="Services\Contacts\EmployeeService.cs" />
+    <Compile Include="Services\Common\LoginService.cs" />
     <Compile Include="Session.cs" />
     <Compile Include="UI\Common\Dashboard.cs">
       <SubType>Form</SubType>
@@ -344,10 +344,16 @@
     <Compile Include="UI\Master Files\FrmBarcodeConfiguration.Designer.cs">
       <DependentUpon>FrmBarcodeConfiguration.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Master Files\FrmProducts.cs">
+    <Compile Include="UI\Products\FrmUnits.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Master Files\FrmProducts.Designer.cs">
+    <Compile Include="UI\Products\FrmUnits.Designer.cs">
+      <DependentUpon>FrmUnits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Products\FrmProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Products\FrmProducts.Designer.cs">
       <DependentUpon>FrmProducts.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Master Files\FrmProductStatusCodes.cs">
@@ -356,22 +362,22 @@
     <Compile Include="UI\Master Files\FrmProductStatusCodes.Designer.cs">
       <DependentUpon>FrmProductStatusCodes.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Master Files\FrmBrands.cs">
+    <Compile Include="UI\Products\FrmBrands.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Master Files\FrmBrands.Designer.cs">
+    <Compile Include="UI\Products\FrmBrands.Designer.cs">
       <DependentUpon>FrmBrands.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Master Files\FrmCustomer.cs">
+    <Compile Include="UI\Contacts\FrmCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Master Files\FrmCustomer.Designer.cs">
+    <Compile Include="UI\Contacts\FrmCustomer.Designer.cs">
       <DependentUpon>FrmCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Master Files\FrmCategories.cs">
+    <Compile Include="UI\Products\FrmCategories.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Master Files\FrmCategories.Designer.cs">
+    <Compile Include="UI\Products\FrmCategories.Designer.cs">
       <DependentUpon>FrmCategories.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Master Files\FrmReportViewer.cs">
@@ -380,16 +386,16 @@
     <Compile Include="UI\Master Files\FrmReportViewer.Designer.cs">
       <DependentUpon>FrmReportViewer.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Master Files\FrmSupplier.cs">
+    <Compile Include="UI\Contacts\FrmSupplier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Master Files\FrmSupplier.Designer.cs">
+    <Compile Include="UI\Contacts\FrmSupplier.Designer.cs">
       <DependentUpon>FrmSupplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Master Files\FrmEmployee.cs">
+    <Compile Include="UI\Contacts\FrmEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Master Files\FrmEmployee.Designer.cs">
+    <Compile Include="UI\Contacts\FrmEmployee.Designer.cs">
       <DependentUpon>FrmEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Purchase\FrmPurchaseOrder.cs">
@@ -536,28 +542,31 @@
     <EmbeddedResource Include="UI\Master Files\FrmBarcodeConfiguration.resx">
       <DependentUpon>FrmBarcodeConfiguration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Master Files\FrmProducts.resx">
+    <EmbeddedResource Include="UI\Products\FrmUnits.resx">
+      <DependentUpon>FrmUnits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Products\FrmProducts.resx">
       <DependentUpon>FrmProducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Master Files\FrmProductStatusCodes.resx">
       <DependentUpon>FrmProductStatusCodes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Master Files\FrmBrands.resx">
+    <EmbeddedResource Include="UI\Products\FrmBrands.resx">
       <DependentUpon>FrmBrands.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Master Files\FrmCustomer.resx">
+    <EmbeddedResource Include="UI\Contacts\FrmCustomer.resx">
       <DependentUpon>FrmCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Master Files\FrmCategories.resx">
+    <EmbeddedResource Include="UI\Products\FrmCategories.resx">
       <DependentUpon>FrmCategories.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Master Files\FrmReportViewer.resx">
       <DependentUpon>FrmReportViewer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Master Files\FrmSupplier.resx">
+    <EmbeddedResource Include="UI\Contacts\FrmSupplier.resx">
       <DependentUpon>FrmSupplier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Master Files\FrmEmployee.resx">
+    <EmbeddedResource Include="UI\Contacts\FrmEmployee.resx">
       <DependentUpon>FrmEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Purchase\FrmPurchaseOrder.resx">

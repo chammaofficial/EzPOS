@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EzPOS.Models;
+using EzPOS.Models.Products;
 
 namespace EzPOS.Migrations
 {

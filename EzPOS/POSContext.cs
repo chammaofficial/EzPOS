@@ -1,5 +1,9 @@
 ﻿using System.Data.Entity;
 using EzPOS.Models;
+using EzPOS.Models.Common;
+using EzPOS.Models.Contacts;
+using EzPOS.Models.Products;
+using EzPOS.Models.Settings;
 
 namespace EzPOS
 {

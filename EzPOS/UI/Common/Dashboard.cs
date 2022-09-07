@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
 using EzPOS.UI;
+using EzPOS.UI.Contacts;
 using EzPOS.UI.Master_Files;
+using EzPOS.UI.Products;
 using EzPOS.UI.Purchase;
 using EzPOS.UI.Settings;
 

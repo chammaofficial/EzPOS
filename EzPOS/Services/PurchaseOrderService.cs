@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EzPOS.Models;
+using EzPOS.Models.Contacts;
+using EzPOS.Models.Products;
 
 namespace EzPOS.Services
 {

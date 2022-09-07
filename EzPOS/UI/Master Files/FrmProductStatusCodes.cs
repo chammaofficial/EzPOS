@@ -2,7 +2,9 @@
 using System.Windows.Forms;
 using EzPOS.Helpers;
 using EzPOS.Models;
+using EzPOS.Models.Products;
 using EzPOS.Services;
+using EzPOS.Services.Products;
 
 namespace EzPOS.UI.Master_Files
 {

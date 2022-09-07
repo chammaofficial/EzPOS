@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EzPOS.Services.Common;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace EzPOS.UI.Common
@@ -27,7 +28,7 @@ namespace EzPOS.UI.Common
 
         private void LoadBranches()
         {
-             txtBranch.Properties.DataSource = Services.LoginService.GetAllBranches();
+             txtBranch.Properties.DataSource = LoginService.GetAllBranches();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -36,7 +37,7 @@ namespace EzPOS.UI.Common
                 Helpers.Alerts.Info("Please Select a Branch to login.");
             else
             {
-                if (Services.LoginService.VerifyLogin(txtUsername.Text, txtPassword.Text, txtBranch.EditValue.ToString()))
+                if (LoginService.VerifyLogin(txtUsername.Text, txtPassword.Text, txtBranch.EditValue.ToString()))
                 {
                     this.Hide();
                     new Dashboard().Show();

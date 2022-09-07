@@ -4,6 +4,8 @@ using EzPOS.Services;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
+using EzPOS.Models.Settings;
+using EzPOS.Services.Settings;
 
 namespace EzPOS.UI.Settings
 {

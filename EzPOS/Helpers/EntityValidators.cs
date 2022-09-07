@@ -1,6 +1,9 @@
 ﻿using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using EzPOS.Models;
+using EzPOS.Models.Contacts;
+using EzPOS.Models.Products;
+using EzPOS.Models.Settings;
 
 namespace EzPOS.Helpers
 {

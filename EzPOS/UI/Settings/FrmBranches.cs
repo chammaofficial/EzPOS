@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EzPOS.Helpers;
 using EzPOS.Models;
+using EzPOS.Models.Settings;
 using EzPOS.Services;
+using EzPOS.Services.Settings;
 
 namespace EzPOS.UI.Settings
 {

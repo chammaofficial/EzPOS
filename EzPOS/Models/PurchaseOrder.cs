@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using DevExpress.DataAccess.Native.DataFederation.QueryBuilder;
+using EzPOS.Models.Contacts;
+using EzPOS.Models.Settings;
 
 
 namespace EzPOS.Models
