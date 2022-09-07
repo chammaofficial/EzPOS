@@ -11,9 +11,11 @@ namespace EzPOS.UI.Products
     public partial class FrmProducts : DevExpress.XtraEditors.XtraForm
     {
         private Product tempProduct;
+        private ProductService service;
         public FrmProducts()
         {
             InitializeComponent();
+            service = new ProductService(new POSContext());
             tempProduct = new Product();
         }
 
@@ -63,6 +65,12 @@ namespace EzPOS.UI.Products
                 tempProduct.SubCategoryId = (int)txtSubCategory.EditValue;
             }
 
+            if (txtUnit.EditValue != null)
+            {
+                tempProduct.UnitId = (int)txtUnit.EditValue;
+            }
+
+            tempProduct.HasWarranty = chkWarranty.Checked;
             tempProduct.HasSerial = chkHasSerials.Checked;
             tempProduct.IsExpiring = chkExpiring.Checked;
             tempProduct.IsActive = true;
@@ -75,7 +83,7 @@ namespace EzPOS.UI.Products
             {
                 if (Alerts.Confirm("Are sure want to save this product ?") == DialogResult.Yes)
                 {
-                    ProductService.SaveProduct(tempProduct);
+                    service.SaveProduct(tempProduct);
                     Clear();
                 }
             }
@@ -84,23 +92,26 @@ namespace EzPOS.UI.Products
 
         private void LoadData()
         {
-            GCProduct.DataSource = ProductService.GetProducts();
-            txtBrand.Properties.DataSource = ProductService.GetBrands();
-            txtMainCategory.Properties.DataSource = ProductService.GetMainCategories();
+            GCProduct.DataSource = service.GetProducts();
+            txtBrand.Properties.DataSource = service.GetBrands();
+            txtMainCategory.Properties.DataSource = service.GetMainCategories();
+            txtUnit.Properties.DataSource = service.GetUnits();
         }
 
         private void lnkEdit_Click(object sender, EventArgs e)
         {
-            tempProduct = ProductService.GetProductById(int.Parse(GVProduct.GetRowCellValue(GVProduct.FocusedRowHandle, clmnId).ToString()));
+            tempProduct = service.GetProductById(int.Parse(GVProduct.GetRowCellValue(GVProduct.FocusedRowHandle, clmnId).ToString()));
             txtName.Text = tempProduct.Name;
             txtDescription.Text = tempProduct.Description;
             txtBrand.EditValue = tempProduct.BrandId;
             txtMainCategory.EditValue = tempProduct.CategoryId;
-            txtSubCategory.Properties.DataSource = ProductService.GetSubCategories(tempProduct.CategoryId);
+            txtSubCategory.Properties.DataSource = service.GetSubCategories(tempProduct.CategoryId);
             txtSubCategory.EditValue = tempProduct.SubCategoryId;
+            txtUnit.EditValue = tempProduct.UnitId;
             txtModelNo.Text = tempProduct.ModelNo;
             chkHasSerials.Checked = tempProduct.HasSerial;
             chkExpiring.Checked = tempProduct.IsExpiring;
+            chkWarranty.Checked = tempProduct.HasWarranty;
             txtMaxOrderLevel.Text = tempProduct.MaxOrderLevel.ToString();
             txtReOrderLevel.Text = tempProduct.ReOrderLevel.ToString(); 
             txtCustomBarcode.Text = tempProduct.CustomBarcode;
@@ -108,14 +119,14 @@ namespace EzPOS.UI.Products
 
         private void lnkDelete_Click(object sender, EventArgs e)
         {
-            tempProduct = ProductService.GetProductById(int.Parse(GVProduct.GetRowCellValue(GVProduct.FocusedRowHandle, clmnId).ToString()));
+            tempProduct = service.GetProductById(int.Parse(GVProduct.GetRowCellValue(GVProduct.FocusedRowHandle, clmnId).ToString()));
             tempProduct.IsActive = false;
 
             if (tempProduct.Validate() == true)
             {
                 if (Alerts.Confirm("Are sure want to remove this product ?. This operation cannot be reversed!.") == DialogResult.Yes)
                 {
-                    ProductService.SaveProduct(tempProduct);
+                    service.SaveProduct(tempProduct);
                     Clear();
                 }
             }
@@ -132,7 +143,7 @@ namespace EzPOS.UI.Products
         {
             if (txtMainCategory.EditValue != null)
             {
-                txtSubCategory.Properties.DataSource = ProductService.GetSubCategories((int)txtMainCategory.EditValue);
+                txtSubCategory.Properties.DataSource = service.GetSubCategories((int)txtMainCategory.EditValue);
             }
         }
     }

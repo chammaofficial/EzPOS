@@ -276,9 +276,26 @@
     <Compile Include="Migrations\202209070448217_Removed Precision from Business Settings.designer.cs">
       <DependentUpon>202209070448217_Removed Precision from Business Settings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202209070611314_Add Units.cs" />
+    <Compile Include="Migrations\202209070611314_Add Units.designer.cs">
+      <DependentUpon>202209070611314_Add Units.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202209070627317_Add Timestamps to Units.cs" />
+    <Compile Include="Migrations\202209070627317_Add Timestamps to Units.designer.cs">
+      <DependentUpon>202209070627317_Add Timestamps to Units.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202209070638254_Add warranty and unit for Product.cs" />
+    <Compile Include="Migrations\202209070638254_Add warranty and unit for Product.designer.cs">
+      <DependentUpon>202209070638254_Add warranty and unit for Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202209070651137_Add warranty and unit for Product required.cs" />
+    <Compile Include="Migrations\202209070651137_Add warranty and unit for Product required.designer.cs">
+      <DependentUpon>202209070651137_Add warranty and unit for Product required.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\ProductSerial.cs" />
     <Compile Include="Models\BarcodeConfiguration.cs" />
+    <Compile Include="Models\Products\Unit.cs" />
     <Compile Include="Models\Settings\Branch.cs" />
     <Compile Include="Models\Products\Brand.cs" />
     <Compile Include="Models\Settings\BusinessSetting.cs" />
@@ -314,6 +331,7 @@
     <Compile Include="Reports\ReportFiles\Purchase\PurchaseOrderReport.Designer.cs">
       <DependentUpon>PurchaseOrderReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Services\Products\UnitService.cs" />
     <Compile Include="Services\Settings\BranchService.cs" />
     <Compile Include="Services\Settings\BusinessSettingService.cs" />
     <Compile Include="Services\Products\ProductService.cs" />
@@ -523,6 +541,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202209070448217_Removed Precision from Business Settings.resx">
       <DependentUpon>202209070448217_Removed Precision from Business Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209070611314_Add Units.resx">
+      <DependentUpon>202209070611314_Add Units.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209070627317_Add Timestamps to Units.resx">
+      <DependentUpon>202209070627317_Add Timestamps to Units.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209070638254_Add warranty and unit for Product.resx">
+      <DependentUpon>202209070638254_Add warranty and unit for Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209070651137_Add warranty and unit for Product required.resx">
+      <DependentUpon>202209070651137_Add warranty and unit for Product required.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

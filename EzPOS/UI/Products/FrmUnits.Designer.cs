@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUnits));
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.GCBrands = new DevExpress.XtraGrid.GridControl();
-            this.GVBrands = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.GCUnits = new DevExpress.XtraGrid.GridControl();
+            this.GVUnits = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.clmnId = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clmnName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clmnEdit = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -39,6 +40,8 @@
             this.clmnDelete = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lnkDelete = new DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.txtSymbol = new DevExpress.XtraEditors.TextEdit();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
             this.BtnClear = new DevExpress.XtraEditors.SimpleButton();
             this.BtnSave = new DevExpress.XtraEditors.SimpleButton();
@@ -46,16 +49,18 @@
             this.txtId = new DevExpress.XtraEditors.TextEdit();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.clmnSymbol = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GCBrands)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GVBrands)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GCUnits)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GVUnits)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lnkEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lnkDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSymbol.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).BeginInit();
             this.SuspendLayout();
@@ -78,40 +83,41 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl2.AutoSize = true;
             this.groupControl2.CaptionImageOptions.Image = global::EzPOS.Properties.Resources.list_view_32px;
-            this.groupControl2.Controls.Add(this.GCBrands);
+            this.groupControl2.Controls.Add(this.GCUnits);
             this.groupControl2.Location = new System.Drawing.Point(11, 330);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(9, 10, 9, 10);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(711, 359);
             this.groupControl2.TabIndex = 1;
-            this.groupControl2.Text = "Brand List";
+            this.groupControl2.Text = "Units List";
             // 
-            // GCBrands
+            // GCUnits
             // 
-            this.GCBrands.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GCBrands.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.GCBrands.Location = new System.Drawing.Point(2, 41);
-            this.GCBrands.MainView = this.GVBrands;
-            this.GCBrands.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.GCBrands.Name = "GCBrands";
-            this.GCBrands.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.GCUnits.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GCUnits.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.GCUnits.Location = new System.Drawing.Point(2, 41);
+            this.GCUnits.MainView = this.GVUnits;
+            this.GCUnits.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.GCUnits.Name = "GCUnits";
+            this.GCUnits.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.lnkEdit,
             this.lnkDelete});
-            this.GCBrands.Size = new System.Drawing.Size(707, 316);
-            this.GCBrands.TabIndex = 0;
-            this.GCBrands.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.GVBrands});
+            this.GCUnits.Size = new System.Drawing.Size(707, 316);
+            this.GCUnits.TabIndex = 0;
+            this.GCUnits.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.GVUnits});
             // 
-            // GVBrands
+            // GVUnits
             // 
-            this.GVBrands.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.GVUnits.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.clmnId,
             this.clmnName,
+            this.clmnSymbol,
             this.clmnEdit,
             this.clmnDelete});
-            this.GVBrands.DetailHeight = 546;
-            this.GVBrands.GridControl = this.GCBrands;
-            this.GVBrands.Name = "GVBrands";
+            this.GVUnits.DetailHeight = 546;
+            this.GVUnits.GridControl = this.GCUnits;
+            this.GVUnits.Name = "GVUnits";
             // 
             // clmnId
             // 
@@ -123,7 +129,7 @@
             this.clmnId.OptionsColumn.ReadOnly = true;
             this.clmnId.Visible = true;
             this.clmnId.VisibleIndex = 0;
-            this.clmnId.Width = 164;
+            this.clmnId.Width = 116;
             // 
             // clmnName
             // 
@@ -135,7 +141,7 @@
             this.clmnName.OptionsColumn.ReadOnly = true;
             this.clmnName.Visible = true;
             this.clmnName.VisibleIndex = 1;
-            this.clmnName.Width = 524;
+            this.clmnName.Width = 173;
             // 
             // clmnEdit
             // 
@@ -144,8 +150,8 @@
             this.clmnEdit.MinWidth = 25;
             this.clmnEdit.Name = "clmnEdit";
             this.clmnEdit.Visible = true;
-            this.clmnEdit.VisibleIndex = 2;
-            this.clmnEdit.Width = 94;
+            this.clmnEdit.VisibleIndex = 3;
+            this.clmnEdit.Width = 105;
             // 
             // lnkEdit
             // 
@@ -162,8 +168,8 @@
             this.clmnDelete.MinWidth = 25;
             this.clmnDelete.Name = "clmnDelete";
             this.clmnDelete.Visible = true;
-            this.clmnDelete.VisibleIndex = 3;
-            this.clmnDelete.Width = 94;
+            this.clmnDelete.VisibleIndex = 4;
+            this.clmnDelete.Width = 113;
             // 
             // lnkDelete
             // 
@@ -178,7 +184,9 @@
             this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl1.AutoSize = true;
-            this.groupControl1.CaptionImageOptions.Image = global::EzPOS.Properties.Resources.trademark_32px;
+            this.groupControl1.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl1.CaptionImageOptions.Image")));
+            this.groupControl1.Controls.Add(this.txtSymbol);
+            this.groupControl1.Controls.Add(this.label3);
             this.groupControl1.Controls.Add(this.btnRefresh);
             this.groupControl1.Controls.Add(this.BtnClear);
             this.groupControl1.Controls.Add(this.BtnSave);
@@ -193,10 +201,29 @@
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Unit Details";
             // 
+            // txtSymbol
+            // 
+            this.txtSymbol.Location = new System.Drawing.Point(95, 160);
+            this.txtSymbol.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.txtSymbol.Name = "txtSymbol";
+            this.txtSymbol.Size = new System.Drawing.Size(238, 23);
+            this.txtSymbol.TabIndex = 18;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(27, 161);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 18);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Symbol :";
+            // 
             // btnRefresh
             // 
             this.btnRefresh.ImageOptions.Image = global::EzPOS.Properties.Resources.refresh_32px;
-            this.btnRefresh.Location = new System.Drawing.Point(25, 194);
+            this.btnRefresh.Location = new System.Drawing.Point(30, 197);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(102, 34);
@@ -207,7 +234,7 @@
             // BtnClear
             // 
             this.BtnClear.ImageOptions.Image = global::EzPOS.Properties.Resources.eraser_tool_32px;
-            this.BtnClear.Location = new System.Drawing.Point(249, 194);
+            this.BtnClear.Location = new System.Drawing.Point(254, 197);
             this.BtnClear.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.BtnClear.Name = "BtnClear";
             this.BtnClear.Size = new System.Drawing.Size(102, 34);
@@ -218,7 +245,7 @@
             // BtnSave
             // 
             this.BtnSave.ImageOptions.Image = global::EzPOS.Properties.Resources.save_32px;
-            this.BtnSave.Location = new System.Drawing.Point(137, 194);
+            this.BtnSave.Location = new System.Drawing.Point(142, 197);
             this.BtnSave.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(102, 34);
@@ -228,7 +255,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(95, 137);
+            this.txtName.Location = new System.Drawing.Point(95, 121);
             this.txtName.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(238, 23);
@@ -248,7 +275,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(27, 138);
+            this.label2.Location = new System.Drawing.Point(35, 122);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 18);
@@ -259,12 +286,22 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(52, 83);
+            this.label1.Location = new System.Drawing.Point(60, 83);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "Id :";
+            // 
+            // clmnSymbol
+            // 
+            this.clmnSymbol.Caption = "Symbol";
+            this.clmnSymbol.FieldName = "Symbol";
+            this.clmnSymbol.MinWidth = 25;
+            this.clmnSymbol.Name = "clmnSymbol";
+            this.clmnSymbol.Visible = true;
+            this.clmnSymbol.VisibleIndex = 2;
+            this.clmnSymbol.Width = 181;
             // 
             // FrmUnits
             // 
@@ -274,6 +311,7 @@
             this.ClientSize = new System.Drawing.Size(735, 709);
             this.Controls.Add(this.panelControl1);
             this.IconOptions.Image = global::EzPOS.Properties.Resources.trademark_32px;
+            this.IconOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("FrmUnits.IconOptions.LargeImage")));
             this.Name = "FrmUnits";
             this.Text = "Units";
             this.Load += new System.EventHandler(this.FrmEmployee_Load);
@@ -282,13 +320,14 @@
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.GCBrands)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GVBrands)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GCUnits)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GVUnits)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lnkEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lnkDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSymbol.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtId.Properties)).EndInit();
             this.ResumeLayout(false);
@@ -300,8 +339,8 @@
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevExpress.XtraGrid.GridControl GCBrands;
-        private DevExpress.XtraGrid.Views.Grid.GridView GVBrands;
+        private DevExpress.XtraGrid.GridControl GCUnits;
+        private DevExpress.XtraGrid.Views.Grid.GridView GVUnits;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.TextEdit txtName;
@@ -315,5 +354,8 @@
         private DevExpress.XtraEditors.SimpleButton btnRefresh;
         private DevExpress.XtraGrid.Columns.GridColumn clmnEdit;
         private DevExpress.XtraGrid.Columns.GridColumn clmnDelete;
+        private DevExpress.XtraEditors.TextEdit txtSymbol;
+        private System.Windows.Forms.Label label3;
+        private DevExpress.XtraGrid.Columns.GridColumn clmnSymbol;
     }
 }

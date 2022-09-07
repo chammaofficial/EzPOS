@@ -23,6 +23,7 @@ namespace EzPOS
         public DbSet<Currency> Currencies { get; set; }
         public DbSet<BusinessSetting> BusinessSettings { get; set; }
 
+        public DbSet<Unit> Units { get; set; }
 
 
         public POSContext() : base("EzPOS")

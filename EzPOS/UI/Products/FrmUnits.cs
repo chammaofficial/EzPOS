@@ -10,11 +10,13 @@ namespace EzPOS.UI.Products
 {
     public partial class FrmUnits : DevExpress.XtraEditors.XtraForm
     {
-        private Brand TempBrand;
+        private Unit TempUnit;
+        private UnitService service;
         public FrmUnits()
         {
             InitializeComponent();
-            TempBrand = new Brand();
+            service = new UnitService(new POSContext());
+            TempUnit = new Unit();
         }
 
         private void FrmEmployee_Load(object sender, EventArgs e)
@@ -24,7 +26,7 @@ namespace EzPOS.UI.Products
 
         private void Clear()
         {
-            TempBrand = new Brand();
+            TempUnit = new Unit();
             txtName.Clear();
         }
 
@@ -35,12 +37,13 @@ namespace EzPOS.UI.Products
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            TempBrand.Name = txtName.Text;
-            if (TempBrand.Validate() == true)
+            TempUnit.Name = txtName.Text;
+            TempUnit.Symbol = txtSymbol.Text;
+            if (TempUnit.Validate() == true)
             {
-                if (Alerts.Confirm("Are sure want to save this brand ?") == DialogResult.Yes)
+                if (Alerts.Confirm("Are sure want to save this Unit ?") == DialogResult.Yes)
                 {
-                    BrandService.SaveBrand(TempBrand);
+                    service.SaveUnit(TempUnit);
                     Clear();
                 }
             }
@@ -49,21 +52,21 @@ namespace EzPOS.UI.Products
 
         private void LoadData()
         {
-            var BrandList = BrandService.GetAllActiveBrands();
-            GCBrands.DataSource = BrandList;
+            var UnitList = service.GetAllActiveUnits();
+            GCUnits.DataSource = UnitList;
         }
 
         private void lnkDelete_Click(object sender, EventArgs e)
         {
-            TempBrand = BrandService.GetBrandById(int.Parse(GVBrands.GetRowCellValue(GVBrands.FocusedRowHandle, clmnId).ToString()));
-            if (Alerts.Confirm("Are sure want to remove this brand ?. This operation cannot be reversed!.") == DialogResult.Yes)
+            TempUnit = service.GetUnitById(int.Parse(GVUnits.GetRowCellValue(GVUnits.FocusedRowHandle, clmnId).ToString()));
+            if (Alerts.Confirm("Are sure want to remove this Unit ?. This operation cannot be reversed!.") == DialogResult.Yes)
             {
-                BrandService.DeleteBrand(TempBrand.Id);
+                service.DeleteUnit(TempUnit.Id);
                 Clear();
             }
             
             LoadData();
-            TempBrand = new Brand();
+            TempUnit = new Unit();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -73,8 +76,9 @@ namespace EzPOS.UI.Products
 
         private void lnkEdit_Click(object sender, EventArgs e)
         {
-            TempBrand = BrandService.GetBrandById(int.Parse(GVBrands.GetRowCellValue(GVBrands.FocusedRowHandle, clmnId).ToString()));
-            txtName.Text = TempBrand.Name;
+            TempUnit = service.GetUnitById(int.Parse(GVUnits.GetRowCellValue(GVUnits.FocusedRowHandle, clmnId).ToString()));
+            txtName.Text = TempUnit.Name;
+            txtSymbol.Text = TempUnit.Symbol;
         }
     }
 }

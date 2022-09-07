@@ -34,5 +34,9 @@ namespace EzPOS.Models.Products
         public string UpdateBy { get; set; }
         public DateTime? UpdateDate { get; set; }
 
+        public int UnitId { get; set; }
+        public Unit Unit { get; set; }
+        public bool HasWarranty  { get; set; }        
+
     }
 }

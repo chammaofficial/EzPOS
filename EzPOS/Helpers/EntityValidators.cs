@@ -196,5 +196,23 @@ namespace EzPOS.Helpers
             }
         }
 
+        public static bool Validate(this Unit entity)
+        {
+            using (var context = new POSContext())
+            {
+                var errors = context.Entry(entity).GetValidationResult().ValidationErrors;
+                if (errors.Any())
+                {
+                    Alerts.Error(errors.First().ErrorMessage);
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+        }
+
+
     }
 }

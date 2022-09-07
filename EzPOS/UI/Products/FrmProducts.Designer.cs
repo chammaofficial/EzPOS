@@ -44,11 +44,20 @@
             this.clmnIsExpiring = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clmnReOrderLevel = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clmnMaxOrderLevel = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.clmnEdit = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lnkEdit = new DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit();
             this.clmnDelete = new DevExpress.XtraGrid.Columns.GridColumn();
             this.lnkDelete = new DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.chkWarranty = new System.Windows.Forms.CheckBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtUnit = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.chkExpiring = new System.Windows.Forms.CheckBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -95,6 +104,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.lnkDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUnit.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCustomBarcode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtReOrderLevel.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaxOrderLevel.Properties)).BeginInit();
@@ -167,6 +178,7 @@
             this.clmnIsExpiring,
             this.clmnReOrderLevel,
             this.clmnMaxOrderLevel,
+            this.gridColumn4,
             this.clmnEdit,
             this.clmnDelete});
             this.GVProduct.DetailHeight = 546;
@@ -263,6 +275,7 @@
             this.clmnBarcode.FieldName = "CustomBarcode";
             this.clmnBarcode.MinWidth = 25;
             this.clmnBarcode.Name = "clmnBarcode";
+            this.clmnBarcode.OptionsColumn.AllowEdit = false;
             this.clmnBarcode.Visible = true;
             this.clmnBarcode.VisibleIndex = 7;
             this.clmnBarcode.Width = 94;
@@ -273,6 +286,7 @@
             this.clmnSerialStatus.FieldName = "HasSerial";
             this.clmnSerialStatus.MinWidth = 25;
             this.clmnSerialStatus.Name = "clmnSerialStatus";
+            this.clmnSerialStatus.OptionsColumn.AllowEdit = false;
             this.clmnSerialStatus.Visible = true;
             this.clmnSerialStatus.VisibleIndex = 8;
             this.clmnSerialStatus.Width = 94;
@@ -283,6 +297,7 @@
             this.clmnIsExpiring.FieldName = "IsExpiring";
             this.clmnIsExpiring.MinWidth = 25;
             this.clmnIsExpiring.Name = "clmnIsExpiring";
+            this.clmnIsExpiring.OptionsColumn.AllowEdit = false;
             this.clmnIsExpiring.Visible = true;
             this.clmnIsExpiring.VisibleIndex = 9;
             this.clmnIsExpiring.Width = 94;
@@ -293,6 +308,7 @@
             this.clmnReOrderLevel.FieldName = "MaxOrderLevel";
             this.clmnReOrderLevel.MinWidth = 25;
             this.clmnReOrderLevel.Name = "clmnReOrderLevel";
+            this.clmnReOrderLevel.OptionsColumn.AllowEdit = false;
             this.clmnReOrderLevel.Visible = true;
             this.clmnReOrderLevel.VisibleIndex = 10;
             this.clmnReOrderLevel.Width = 94;
@@ -303,9 +319,21 @@
             this.clmnMaxOrderLevel.FieldName = "MaxOrderLevel";
             this.clmnMaxOrderLevel.MinWidth = 25;
             this.clmnMaxOrderLevel.Name = "clmnMaxOrderLevel";
+            this.clmnMaxOrderLevel.OptionsColumn.AllowEdit = false;
             this.clmnMaxOrderLevel.Visible = true;
             this.clmnMaxOrderLevel.VisibleIndex = 11;
             this.clmnMaxOrderLevel.Width = 94;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "UOM";
+            this.gridColumn4.FieldName = "Unit.Symbol";
+            this.gridColumn4.MinWidth = 25;
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.OptionsColumn.AllowEdit = false;
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 12;
+            this.gridColumn4.Width = 94;
             // 
             // clmnEdit
             // 
@@ -314,7 +342,7 @@
             this.clmnEdit.MinWidth = 25;
             this.clmnEdit.Name = "clmnEdit";
             this.clmnEdit.Visible = true;
-            this.clmnEdit.VisibleIndex = 12;
+            this.clmnEdit.VisibleIndex = 13;
             this.clmnEdit.Width = 94;
             // 
             // lnkEdit
@@ -332,7 +360,7 @@
             this.clmnDelete.MinWidth = 25;
             this.clmnDelete.Name = "clmnDelete";
             this.clmnDelete.Visible = true;
-            this.clmnDelete.VisibleIndex = 13;
+            this.clmnDelete.VisibleIndex = 14;
             this.clmnDelete.Width = 94;
             // 
             // lnkDelete
@@ -350,6 +378,10 @@
             this.groupControl1.AutoSize = true;
             this.groupControl1.CaptionImageOptions.Image = global::EzPOS.Properties.Resources.product_32px;
             this.groupControl1.CaptionImageOptions.SvgImageSize = new System.Drawing.Size(16, 16);
+            this.groupControl1.Controls.Add(this.chkWarranty);
+            this.groupControl1.Controls.Add(this.label14);
+            this.groupControl1.Controls.Add(this.label13);
+            this.groupControl1.Controls.Add(this.txtUnit);
             this.groupControl1.Controls.Add(this.chkExpiring);
             this.groupControl1.Controls.Add(this.label12);
             this.groupControl1.Controls.Add(this.label11);
@@ -383,6 +415,85 @@
             this.groupControl1.Size = new System.Drawing.Size(1256, 292);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Product Details";
+            // 
+            // chkWarranty
+            // 
+            this.chkWarranty.AutoSize = true;
+            this.chkWarranty.Location = new System.Drawing.Point(500, 237);
+            this.chkWarranty.Name = "chkWarranty";
+            this.chkWarranty.Size = new System.Drawing.Size(107, 20);
+            this.chkWarranty.TabIndex = 32;
+            this.chkWarranty.Text = "Has Warranty";
+            this.chkWarranty.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(368, 236);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(125, 18);
+            this.label14.TabIndex = 33;
+            this.label14.Text = "Warranty Status :";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(450, 122);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(43, 18);
+            this.label13.TabIndex = 31;
+            this.label13.Text = "Unit :";
+            // 
+            // txtUnit
+            // 
+            this.txtUnit.Location = new System.Drawing.Point(498, 121);
+            this.txtUnit.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.txtUnit.Name = "txtUnit";
+            this.txtUnit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtUnit.Properties.DisplayMember = "Name";
+            this.txtUnit.Properties.NullText = "";
+            this.txtUnit.Properties.PopupView = this.gridView1;
+            this.txtUnit.Properties.ValueMember = "Id";
+            this.txtUnit.Size = new System.Drawing.Size(238, 23);
+            this.txtUnit.TabIndex = 30;
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3});
+            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Id";
+            this.gridColumn1.FieldName = "Id";
+            this.gridColumn1.Name = "gridColumn1";
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Name";
+            this.gridColumn2.FieldName = "Name";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 0;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Symbol";
+            this.gridColumn3.FieldName = "Symbol";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 1;
             // 
             // chkExpiring
             // 
@@ -465,7 +576,7 @@
             // chkHasSerials
             // 
             this.chkHasSerials.AutoSize = true;
-            this.chkHasSerials.Location = new System.Drawing.Point(482, 198);
+            this.chkHasSerials.Location = new System.Drawing.Point(500, 198);
             this.chkHasSerials.Name = "chkHasSerials";
             this.chkHasSerials.Size = new System.Drawing.Size(142, 20);
             this.chkHasSerials.TabIndex = 6;
@@ -476,7 +587,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(380, 197);
+            this.label8.Location = new System.Drawing.Point(396, 197);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(97, 18);
@@ -487,7 +598,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(398, 158);
+            this.label7.Location = new System.Drawing.Point(414, 161);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 18);
@@ -496,7 +607,7 @@
             // 
             // txtModelNo
             // 
-            this.txtModelNo.Location = new System.Drawing.Point(482, 157);
+            this.txtModelNo.Location = new System.Drawing.Point(498, 160);
             this.txtModelNo.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.txtModelNo.Name = "txtModelNo";
             this.txtModelNo.Size = new System.Drawing.Size(238, 23);
@@ -539,7 +650,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(400, 83);
+            this.label6.Location = new System.Drawing.Point(29, 236);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 18);
@@ -572,7 +683,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(371, 121);
+            this.label3.Location = new System.Drawing.Point(387, 83);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 18);
@@ -667,7 +778,7 @@
             // 
             // txtMainCategory
             // 
-            this.txtMainCategory.Location = new System.Drawing.Point(482, 82);
+            this.txtMainCategory.Location = new System.Drawing.Point(111, 235);
             this.txtMainCategory.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.txtMainCategory.Name = "txtMainCategory";
             this.txtMainCategory.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -706,7 +817,7 @@
             // 
             // txtSubCategory
             // 
-            this.txtSubCategory.Location = new System.Drawing.Point(482, 120);
+            this.txtSubCategory.Location = new System.Drawing.Point(498, 82);
             this.txtSubCategory.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.txtSubCategory.Name = "txtSubCategory";
             this.txtSubCategory.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -765,6 +876,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUnit.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCustomBarcode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtReOrderLevel.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMaxOrderLevel.Properties)).EndInit();
@@ -841,5 +954,14 @@
         private DevExpress.XtraGrid.Columns.GridColumn clmnIsExpiring;
         private DevExpress.XtraGrid.Columns.GridColumn clmnReOrderLevel;
         private DevExpress.XtraGrid.Columns.GridColumn clmnMaxOrderLevel;
+        private System.Windows.Forms.CheckBox chkWarranty;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private DevExpress.XtraEditors.GridLookUpEdit txtUnit;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
     }
 }

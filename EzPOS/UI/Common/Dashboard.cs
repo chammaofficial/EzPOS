@@ -112,5 +112,12 @@ namespace EzPOS.UI.Common
             form.MdiParent = documentManager1.MdiParent;
             form.Show();
         }
+
+        private void barBtnUnits_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmUnits form = new FrmUnits();
+            form.MdiParent = documentManager1.MdiParent;
+            form.Show();
+        }
     }
 }

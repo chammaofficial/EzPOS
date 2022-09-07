@@ -6,9 +6,15 @@ using EzPOS.Models.Products;
 
 namespace EzPOS.Services.Products
 {
-    public static class ProductService
+    public class ProductService
     {
-        public static IEnumerable<Brand> GetBrands()
+        private POSContext context;
+
+        public ProductService(POSContext context)
+        {
+            this.context = context;
+        }
+        public IEnumerable<Brand> GetBrands()
         {
             using (var context = new POSContext())
             {
@@ -16,7 +22,7 @@ namespace EzPOS.Services.Products
             }
         }
 
-        public static IEnumerable<Category> GetMainCategories()
+        public IEnumerable<Category> GetMainCategories()
         {
             using (var context = new POSContext())
             {
@@ -24,7 +30,7 @@ namespace EzPOS.Services.Products
             }
         }
 
-        public static IEnumerable<Category> GetSubCategories(int? id)
+        public IEnumerable<Category> GetSubCategories(int? id)
         {
             using (var context = new POSContext())
             {
@@ -32,7 +38,7 @@ namespace EzPOS.Services.Products
             }
         }
 
-        public static Product GetProductById(int id)
+        public Product GetProductById(int id)
         {
             using (var context = new POSContext())
             {
@@ -40,7 +46,7 @@ namespace EzPOS.Services.Products
             }
         }
 
-        public static void SaveProduct(Product prd)
+        public void SaveProduct(Product prd)
         {
             using (var context = new POSContext())
             {
@@ -63,12 +69,17 @@ namespace EzPOS.Services.Products
             }
         }
 
-        public static IEnumerable<Product> GetProducts()
+        public IEnumerable<Product> GetProducts()
         {
             using (var context = new POSContext())
             {
-                return context.Products.Include(x => x.Brand).Include(x => x.Category).Include(x => x.SubCategory).ToList();
+                return context.Products.Include(x => x.Brand).Include(x => x.Category).Include(x => x.SubCategory).Include(x=>x.Unit).ToList();
             }
+        }
+
+        public IEnumerable<Unit> GetUnits()
+        {
+            return context.Units.ToList();
         }
 
     }
